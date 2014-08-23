@@ -1,5 +1,7 @@
 Pmmgmt::Application.routes.draw do
+  devise_for :users
   resources :streets
+  resources :sessions
 
   root 'static#index'
 
