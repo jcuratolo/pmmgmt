@@ -1,6 +1,4 @@
 Pmmgmt::Application.routes.draw do
-  resources :streets
-
   root 'static#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
