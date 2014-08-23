@@ -36,6 +36,10 @@ gem 'unicorn'
 
 gem 'rails_12factor', group: :production
 
+gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'font-awesome-rails', '~> 4.1.0.0'
+
 ruby "2.0.0"
 
 # Use ActiveModel has_secure_password
