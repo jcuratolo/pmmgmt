@@ -32,24 +32,25 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'unicorn'
-
 gem 'rails_12factor', group: :production
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
 gem 'font-awesome-rails', '~> 4.1.0.0'
 
-ruby "2.0.0"
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+
+ruby "2.0.0"
