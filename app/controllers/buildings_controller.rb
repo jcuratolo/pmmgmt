@@ -1,5 +1,6 @@
 class BuildingsController < ApplicationController
   def index
+    @building = Buildings.all
   end
 
   def create
