@@ -1,0 +1,2 @@
+module BuildingFeaturesHelper
+end

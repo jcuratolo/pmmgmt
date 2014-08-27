@@ -1,6 +1,8 @@
 Pmmgmt::Application.routes.draw do
   resources  :buildings
   resources  :units
+  resources  :building_features
+  resources  :unit_features
   devise_for :users
   resources  :sessions
   root 'static#index'
