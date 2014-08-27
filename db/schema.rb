@@ -11,16 +11,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140823230618) do
+ActiveRecord::Schema.define(version: 20140827194809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "building_features", force: true do |t|
+    t.string   "bfName"
+    t.integer  "building_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "building_features", ["building_id"], name: "index_building_features_on_building_id", using: :btree
+
+  create_table "buildings", force: true do |t|
+    t.string   "bName"
+    t.string   "bAddress1"
+    t.string   "bAddress2"
+    t.string   "bCity"
+    t.string   "bState"
+    t.string   "bZip"
+    t.string   "bPhone"
+    t.string   "bUnitCount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "streets", force: true do |t|
     t.string   "name"
     t.string   "treetype"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "unit_features", force: true do |t|
+    t.string   "ufName"
+    t.integer  "unit_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "unit_features", ["unit_id"], name: "index_unit_features_on_unit_id", using: :btree
+
+  create_table "units", force: true do |t|
+    t.string   "uNumber"
+    t.string   "uType"
+    t.integer  "uBedroomCount"
+    t.float    "uBathroomCount"
+    t.integer  "uSquareFootage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "listing"
   end
 
   create_table "users", force: true do |t|
