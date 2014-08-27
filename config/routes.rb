@@ -1,6 +1,8 @@
 Pmmgmt::Application.routes.draw do
+  resources  :buildings
+  resources  :units
   devise_for :users
-  resources :sessions
+  resources  :sessions
   root 'static#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
