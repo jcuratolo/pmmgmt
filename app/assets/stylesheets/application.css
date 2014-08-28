@@ -124,7 +124,7 @@ h1 {margin: 1.3em;}
 
 @keyframes slideUp {
   0% {
-    transform: translateY(30%);
+    transform: translateY(15%);
   }
   100% {
     transform: translateY(0%);
@@ -133,7 +133,7 @@ h1 {margin: 1.3em;}
 
 @-webkit-keyframes slideUp {
   0% {
-    -webkit-transform: translateY(30%);
+    -webkit-transform: translateY(15%);
   }
   100% {
     -webkit-transform: translateY(0%);
@@ -215,6 +215,15 @@ h1 {margin: 1.3em;}
   color: #cfcfcf;
 }
 
+.mapTxt {
+  font-family: 'Dosis', sans-serif;
+}
+
+@media screen and (max-width: 830px) {
+  .mytextbox {
+    margin-left: 1.25em;
+  }
+}
 
 
 
