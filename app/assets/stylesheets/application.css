@@ -1,3 +1,4 @@
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -21,9 +22,19 @@
 @import 'bootstrap';
 @import "font-awesome";
 
+.navbar-nav.nav-justified > li{
+    float:none;
+}
 
-.mySlider {
-  margin-top: 1em;
+.logoTxt {
+  margin-top: 0em;
+  font-family: 'Dosis', sans-serif;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.logoTxt:hover {
+  color: #555;
 }
 
 .myNavBar {
@@ -41,22 +52,30 @@
 
 h1 {margin: 1.3em;}
 
-.loginBtn {
-  border: none;
-  background-color: white;
-  margin-bottom: 0em;
-}
-
 .loginTxt {
-  margin-top: 5em;
   font-family: 'Dosis', sans-serif;
   font-size: 1.2em;
+  padding-top: 1.3em;
+}
+
+.logOutBtn {
+  position: fixed;
+  top: .4em;
+  left: .4em;
+  border: none;
+  background-color: white;
+  font-family: 'Dosis', sans-serif;
 }
 
 .myArrow {margin-top: 2.7em;}
 
 .carousel-control:hover {
   background-color: rgba(0, 0, 0, .1);
+}
+
+.navWidth {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .slideDown{
@@ -89,6 +108,38 @@ h1 {margin: 1.3em;}
     -webkit-transform: translateY(0%);
   } 
 }
+
+.slideUp{
+  animation-name: slideUp;
+  -webkit-animation-name: slideUp;  
+
+  animation-duration: 1s; 
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;     
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0%);
+  } 
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(30%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  } 
+}
+
 
 .mycontainer {
   position:relative;
@@ -131,18 +182,39 @@ h1 {margin: 1.3em;}
 }
 
 .navLinks {
-  margin-top: 5.5em;
+  margin-top: 1.2em;
   font-family: 'Dosis', sans-serif;
   font-size: 1.2em;
 }
 
 .mainTxtHead {
   font-family: 'Dosis', sans-serif;
-  margin: 2em;
-  margin-bottom: 2.5em;
+  margin: 1.3em;
 }
 
-.logOutBtn {
-  margin-top: 1em;
+.loginForm {
+  font-family: 'Dosis', sans-serif;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 2em;
+
 }
+
+.loginBg {
+  width: 100%;
+  height: 100%;
+  background-color: #ffd86d;
+  position: fixed;
+}
+
+.logoTxt > li > a {
+  color: black !important;
+}
+
+.logoLink a:hover {
+  color: #cfcfcf;
+}
+
+
+
 
