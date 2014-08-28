@@ -1,4 +1,4 @@
-<nav class="myNavBar navbar-default slideDown" role="navigation" style="border-radius:none !important">
+<nav class="myNavBar navbar-default" role="navigation" style="border-radius:none !important">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -17,9 +17,9 @@
 
      <ul class="nav navbar-nav navbar-right navLinks">
         <% if current_user %>  
-          <li class="navLinks"><%= button_to "Log out", destroy_user_session_path, method: :delete, :class => "btn btn-default btn-md loginBtn" %></li>
+          <li class="logOutBtn"><%= button_to "Log out", destroy_user_session_path, method: :delete, :class => "btn btn-default btn-md loginBtn" %></li>
         <% else %>
-          <li>
+          <li class="logOutBtn">
             <%= button_to "Admin Login", user_session_path, method: :get, :class => "btn btn-default btn-md loginBtn" %>
           </li>
         <% end %>

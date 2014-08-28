@@ -15,9 +15,16 @@
 
 /*@import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);*/
 
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,400,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
 @import 'bootstrap';
 @import "font-awesome";
 
+
+.mySlider {
+  margin-top: 1em;
+}
 
 .myNavBar {
   position: fixed;
@@ -25,7 +32,7 @@
   width: 100%;
   left: 0;
   background-color: white;
-  height: 5em;
+  height: 10em;
   z-index: 1000;
   border-radius: none;
   border: none !important;
@@ -35,13 +42,15 @@
 h1 {margin: 1.3em;}
 
 .loginBtn {
-  margin-top: 1em;
   border: none;
   background-color: white;
+  margin-bottom: 0em;
 }
 
 .loginTxt {
-  margin-top: .3em;
+  margin-top: 5em;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.2em;
 }
 
 .myArrow {margin-top: 2.7em;}
@@ -98,14 +107,42 @@ h1 {margin: 1.3em;}
   margin-top:0;
 }
 
+.margin {
+  margin: 3em;
+}
+
 .mytext {
   padding-top: 75px;
   color: white;
   text-align: center;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 200;
+  padding: 1em;
+  margin-top: 4em;
 }
 .mytextbox {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   margin-left: 3.3em;
+}
+
+.slideTxt {
+  box-shadow: none;
+}
+
+.navLinks {
+  margin-top: 5.5em;
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.2em;
+}
+
+.mainTxtHead {
+  font-family: 'Dosis', sans-serif;
+  margin: 2em;
+  margin-bottom: 2.5em;
+}
+
+.logOutBtn {
+  margin-top: 1em;
 }
 
