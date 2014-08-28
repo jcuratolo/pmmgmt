@@ -1,0 +1,54 @@
+<nav class="myNavBar navbar-default slideDown" role="navigation" style="border-radius:none !important">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>  
+      <ul class="nav navbar-nav navbar-left navLinks">
+        <%#= form_for @user, {url: new_user_path} do |f| %>
+          <li><%#= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log", :method :get %></li>
+        <%# end %>
+      </ul>
+    </div>
+
+     <ul class="nav navbar-nav navbar-right navLinks">
+        <% if current_user %>  
+          <li class="navLinks"><%= button_to "Log out", destroy_user_session_path, method: :delete, :class => "btn btn-default btn-md loginBtn" %></li>
+        <% else %>
+          <li>
+            <%= button_to "Admin Login", user_session_path, method: :get, :class => "btn btn-default btn-md loginBtn" %>
+          </li>
+        <% end %>
+
+        <%# if current_user %>
+          <li class="navLinks">
+              <%#= button_to "Log out", session_path, method: :delete %>
+          </li>
+        <%# else %>
+          
+        <%#= form_for @user, {url: session_path} do |f| %>
+            <li class="navLinks">
+              <%#= f.text_field :email, placeholder: "Email", :class => "inputEmailer" %> 
+              <%#= f.password_field :password, placeholder: "password", :class => "inputEmaile" %> 
+              <%#= f.submit "Log in", :class => "btn btn-default btn-md btn-grey" %>
+            </li>
+          <%# end %>
+        <%# end %>
+      </ul>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <%# if current_user %>  
+          <li class="navLinks loginTxt"><a href="#">Available Listings</a></li>
+        <%# else %>
+          <li class="navLinks previ loginTxt"><a href="/decisions/">Contact</a></li>
+        <%# end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

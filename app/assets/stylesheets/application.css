@@ -17,3 +17,95 @@
 
 @import 'bootstrap';
 @import "font-awesome";
+
+
+.myNavBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  height: 5em;
+  z-index: 1000;
+  border-radius: none;
+  border: none !important;
+
+}
+
+h1 {margin: 1.3em;}
+
+.loginBtn {
+  margin-top: 1em;
+  border: none;
+  background-color: white;
+}
+
+.loginTxt {
+  margin-top: .3em;
+}
+
+.myArrow {margin-top: 2.7em;}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.slideDown{
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;  
+
+  animation-duration: 1.2s; 
+  -webkit-animation-duration: 1.2s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;           
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }   
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  } 
+}
+
+.mycontainer {
+  position:relative;
+  overflow:hidden;
+}
+.mycontainer .mytextbox {
+  width:300px;
+  height:225px;
+  position:absolute;
+  top:0;
+  left:0;
+  margin-top:-225px;
+  background-color: rgba(0,0,0,0.75);
+}
+.mycontainer:hover .mytextbox {
+  margin-top:0;
+}
+
+.mytext {
+  padding-top: 75px;
+  color: white;
+  text-align: center;
+}
+.mytextbox {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  margin-left: 3.3em;
+}
+
