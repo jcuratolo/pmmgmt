@@ -219,10 +219,17 @@ h1 {margin: 1.3em;}
   font-family: 'Dosis', sans-serif;
 }
 
-@media screen and (max-width: 830px) {
-  .mytextbox {
-    margin-left: 1.25em;
+@media screen and (min-width: 830px) {
+  
+
+  div.margin.container.mainTxtHead.text-center.row.col-md-4.mycontainer.mytextbox {
+    margin-left: 1.25em !important;
   }
+
+  div.myContainer.myTextBox {
+    margin-left: 1.25em !important;
+  }
+ 
 }
 
 
