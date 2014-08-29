@@ -1,5 +1,5 @@
 class UnitsController < ApplicationController
-   def index
+  def index
     @units = Unit.all
   end
   def show
