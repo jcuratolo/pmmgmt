@@ -1,4 +1,4 @@
-<nav class="myNavBar navbar-default" role="navigation" style="border-radius:none !important">
+<nav class="myNavBar navbar-default fadeIn" role="navigation" style="border-radius:none !important">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -14,15 +14,9 @@
         <%# end %>
       </ul>
     </div>
-
-     <ul class="nav navbar-nav nav-justified text-center logoTxt">
-
-    
+      <ul class="nav navbar-nav nav-justified text-center logoTxt">
         <li><a class="logoLink" href="/">< pmgmt ></a></li>
-     
-
-       </ul>
-
+      </ul>
      <ul class="nav navbar-nav navbar-right">
         <% if current_user %>  
           <li><%= button_to "Log out", destroy_user_session_path, method: :delete, :class => "btn btn-default btn-md logOutBtn" %></li>
@@ -56,3 +50,26 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<div class="posFix">
+<div class="dropmenunav">
+          
+      <div id="dropbtn">
+
+          <div class="mobileNav text-center" id="menubutton">
+            <a class="mobilelogoLink" href="/">< pmgmt ><i class="fa fa-sort-desc"></i></a>
+          </div>
+
+      </div>
+      
+      <div id="togglenav">
+        <ul class="dropmenu">
+          <li class="dropLinks"><a href="#">Services</a></li>
+          <li class="dropLinks"><a href="#">About Us</a></li>
+          <li class="dropLinks"><a href="#">Investments</a></li>  
+          <li class="dropLinks"><a href="#">Vacancy List</a></li>
+          <li class="dropLinks"><a href="#">Contact</a></li>
+        </ul>  
+      </div>
+</div>
+</div>

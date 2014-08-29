@@ -16,3 +16,10 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).ready(function(){
+  $('#togglenav').hide();
+    $('#menubutton').click(function() {
+        $('#togglenav').slideToggle("900");
+        return false;
+    });
+}); 

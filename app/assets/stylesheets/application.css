@@ -93,7 +93,7 @@ h1 {margin: 1.3em;}
 
 @keyframes slideDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-40%);
   }
   100% {
     transform: translateY(0%);
@@ -102,7 +102,7 @@ h1 {margin: 1.3em;}
 
 @-webkit-keyframes slideDown {
   0% {
-    -webkit-transform: translateY(-100%);
+    -webkit-transform: translateY(-40%);
   }
   100% {
     -webkit-transform: translateY(0%);
@@ -171,6 +171,7 @@ h1 {margin: 1.3em;}
   padding: 1em;
   margin-top: 4em;
 }
+
 .mytextbox {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
@@ -205,6 +206,7 @@ h1 {margin: 1.3em;}
   height: 100%;
   background-color: #ffd86d;
   position: fixed;
+  top: 0;
 }
 
 .logoTxt > li > a {
@@ -219,18 +221,253 @@ h1 {margin: 1.3em;}
   font-family: 'Dosis', sans-serif;
 }
 
-@media screen and (min-width: 830px) {
-  
+.fadeIn{
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn; 
 
-  div.margin.container.mainTxtHead.text-center.row.col-md-4.mycontainer.mytextbox {
-    margin-left: 1.25em !important;
+  animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s;
+
+  animation-timing-function: ease-in-out; 
+  -webkit-animation-timing-function: ease-in-out;   
+
+  visibility: visible !important; 
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(.9);
+    opacity: 0.0;   
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1; 
+  }   
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(.9);
+    opacity: 0.0;   
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1; 
+  }   
+}
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
   }
 
-  div.myContainer.myTextBox {
-    margin-left: 1.25em !important;
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
   }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    -ms-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.dropmenunav {
+      display: none;
+}
+
+.mobileMarg {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .mytextbox {
+      margin-left: 1.2em;
+    }
  
 }
 
+@media screen and (max-width: 987px) {
 
+.mytextbox {
+      margin-left: 15.3em;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+.mytextbox {
+      margin-left: 17.2em;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .posFix {
+      position: fixed;
+      top: 0em;
+      z-index: 10000;
+      background-color: white;
+      width: 100%;
+    }
+
+    .mySlider {
+      margin-top: 4.5em;
+    }
+
+    .myNavBar {
+      display: none !important;
+    }
+
+    .dropmenunav {
+      display: block;
+    }
+
+    .margin {
+      display: none;
+    }
+
+    .mobileNav {
+        display: block;
+        height: 4.4em;
+        padding: 1.3em;
+    }
+
+    .mobileNav li a {
+      margin-top: -1em;
+      font-size: 1em !important;
+      
+    }
+
+    .fa-sort-desc {
+      color: #cfcfcf;
+      margin-top: -.3em;
+      position: fixed;
+      right: 1em;
+    }
+
+    .mobilelogoLink {
+      font-family: 'Dosis', sans-serif;
+      font-weight: 100;
+      font-size: 2em;
+    }
+
+    .mobileNav a.mobilelogoLink:hover {
+      text-decoration: none;
+      background-color: white;
+      color: #cfcfcf;
+    }
+
+    header p {
+      display: none;
+    }
+
+    .dropLinks {
+      list-style: none;
+      text-align: center;
+      font-family: 'Dosis', sans-serif;
+      font-weight: 100;
+      padding: .4em;
+      margin-left: -1.8em;
+      font-size: 1.2em;
+      width: 100%;
+    }
+
+    .dropLinks a {
+      width: 100%;
+    }
+
+    .dropLinks a:hover {
+      text-decoration: none;
+      background-color: white;
+      color: #cfcfcf;
+    }
+ 
+}
+
+@media screen and (max-width: 600px) {
+
+.mytextbox {
+      margin-left: 11.3em;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+.mytextbox {
+      margin-left: 3.7em;
+    }
+
+}
 
