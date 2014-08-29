@@ -1,0 +1,29 @@
+<%= form_for @building_feature do |bf| %>
+  <% if @building_feature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@building_feature.errors.count, "error") %> prohibited this building_feature from being saved:</h2>
+
+      <ul>
+      <% @building_feature.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= bf.label :building_id %> <br />
+    <%= bf.collection_select :building_id, Building.all, :id, :bAddress1 %>
+  </div>
+
+  <div class="field">
+    Feature <br />
+    <%= bf.text_field :bfName %>
+  </div>
+  
+  <div class="actions">
+    <%= bf.submit %>
+  </div>
+<% end %>
+
+

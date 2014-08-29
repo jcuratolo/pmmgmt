@@ -38,13 +38,6 @@ ActiveRecord::Schema.define(version: 20140829172849) do
     t.datetime "updated_at"
   end
 
-  create_table "streets", force: true do |t|
-    t.string   "name"
-    t.string   "treetype"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "unit_features", force: true do |t|
     t.string   "ufName"
     t.integer  "unit_id"

@@ -1,2 +1,32 @@
-<h1>Buildings#index</h1>
-<p>Find me in app/views/buildings/index.html.erb</p>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>buildings/index.html.erb</p>
+<ul>
+  <% @buildings.each do |b| %>
+
+    <% b.units.each do |u| %>
+    
+      <%= link_to b.bName, edit_building_path(b) %><br/>
+      <%= b.bAddress1 %> #<%= u.uNumber %><br/>
+      <%= b.bCity %><br/>
+      <%= b.bState %> <%= b.bZip %>
+
+      <ul>
+        <li>Type: <%= u.uType %></li>
+        <li># of Bedrooms = <%= u.uBedroomCount %> </li>
+        <li># of Bathrooms = <%= u.uBathroomCount %> </li>
+        <li>Square Footage = <%= u.uSquareFootage %> </li>
+      </ul>
+    <% end %>
+
+    <% b.building_features.each do |f| %>
+    <ul><li> <%= f.bfName %> </li></ul>
+    
+    <% end %>
+    <br/>
+  <% end %>
+</ul>

@@ -1,6 +1,7 @@
 class BuildingsController < ApplicationController
   def index
     @buildings = Building.all
+    #@units = .units.all
   end
   def show
     @building = Building.find(params[:id])
@@ -18,7 +19,9 @@ class BuildingsController < ApplicationController
   end
  
   def edit
+    @building = Building.find(params[:id])
   end
+  
   def update
   end
 
