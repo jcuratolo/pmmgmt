@@ -7,6 +7,8 @@ Pmmgmt::Application.routes.draw do
   # resources  :sessions
   root 'static#index'
 
+  
+
 
 ###### Custom session routes from Jared ##### 
   # as :user do
