@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= u.label :building_id %> <br />
+    <%= u.collection_select :building_id, Building.all, :id, :bAddress1 %>
+  </div>
+
+  <div class="field">
     Unit Number <br />
     <%= u.text_field :uNumber %>
   </div>
@@ -40,3 +45,4 @@
     <%= u.submit %>
   </div>
 <% end %>
+
