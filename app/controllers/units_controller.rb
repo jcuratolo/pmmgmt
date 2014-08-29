@@ -1,17 +1,23 @@
 class UnitsController < ApplicationController
-  def index
+   def index
+    @units = Unit.all
   end
-
-  def create
+  def show
+    @unit = Unit.find(params[:id])
   end
-
   def new
+    @unit = Unit.new
+  end
+  def create
+    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage))
+      if @unit.save
+        redirect_to units_path
+      else 
+        render 'new'
+      end 
   end
 
   def destroy
-  end
-
-  def show
   end
 
   def edit

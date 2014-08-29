@@ -1,0 +1,42 @@
+<%= form_for @unit do |u| %>
+  <% if @unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+      <% @unit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    Unit Number <br />
+    <%= u.text_field :uNumber %>
+  </div>
+  
+  <div class="field">
+    Type <br / >
+    <%= u.text_field :uType, placeholder: "condo, duplex, etc" %>
+  </div>
+
+  <div class="field">
+    Number of Bedrooms <br /> 
+    <%= u.number_field :uBedroomCount %>
+  </div>
+
+  <div class="field">
+    Number of Bathrooms <br /> 
+    <%= u.number_field :uBathroomCount %>
+  </div>
+
+  <div class="field">
+    Square Footage <br /> 
+    <%= u.number_field :uSquareFootage %> sq ft
+  </div>
+
+  <div class="actions">
+    <%= u.submit %>
+  </div>
+<% end %>
