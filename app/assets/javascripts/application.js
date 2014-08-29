@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require bootstrap
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
 //= require_tree .
 
 $(document).ready(function(){
@@ -23,3 +23,7 @@ $(document).ready(function(){
         return false;
     });
 }); 
+
+$('.carousel').carousel({
+    interval: 3000
+});
