@@ -1,3 +1,7 @@
+<header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
 <nav class="myNavBar navbar-default fadeIn" role="navigation" style="border-radius:none !important">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,17 +37,17 @@
       <div class="navWidth">
         <ul class="nav navbar-nav nav-justified text-center">
           <%# if current_user %>  
-            <li class="navLinks loginTxt"><a href="#">Home</a></li>
+            <li class="navLinks loginTxt"><a href="#st-panel-1">Home</a></li>
           <%# else %>
-            <li class="navLinks previ loginTxt"><a href="#">Services</a></li>
+            <li class="navLinks previ loginTxt"><a href="#st-panel-2">Services</a></li>
 
-            <li class="navLinks previ loginTxt"><a href="#">About Us</a></li>
+            <li class="navLinks previ loginTxt"><a href="#st-panel-3">About Us</a></li>
 
-            <li class="navLinks previ loginTxt"><a href="#">Investments</a></li>
+            <li class="navLinks previ loginTxt"><a href="#st-panel-4">Investments</a></li>
 
-            <li class="navLinks previ loginTxt"><a href="#">Vacancy List</a></li>
+            <li class="navLinks previ loginTxt"><a href="#st-panel-5">Vacancy List</a></li>
 
-            <li class="navLinks previ loginTxt"><a href="#">Contact</a></li>
+            <li class="navLinks previ loginTxt"><a href="#st-panel-6">Contact</a></li>
           <%# end %>
         </ul>
       </div> 
@@ -73,3 +77,5 @@
       </div>
 </div>
 </div>
+
+</header>
