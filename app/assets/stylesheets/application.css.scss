@@ -189,13 +189,33 @@ h1 {margin: 1.3em;}
 .centerBtn {
   width: 300px;
   margin: 0 auto;
-  margin-top: 5em;
+  margin-top: 6.5em;
   border: none;
   color: black;
   background-color: #ffd86d;
   font-family: 'Dosis', sans-serif;
   font-weight: 100;
 
+}
+
+.logohome {
+  font-weight:100;
+  font-size: 4em;
+  padding-top: -10.5em;
+  margin-top: -.8em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+}
+
+.logohome:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .btnCenter {
@@ -256,6 +276,7 @@ h1 {margin: 1.3em;}
 
 .mapTxt {
   font-family: 'Dosis', sans-serif;
+  margin-bottom: 2em;
 }
 
 .fadeIn{
