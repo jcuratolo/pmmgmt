@@ -33,6 +33,15 @@
   text-align: center;
 }
 
+.st-container > a:hover {
+  z-index: 10;
+  font-weight: 200;
+  background: white;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}
+
 /* "Fix" for percentage rounding: add a background bar pseudo element with the same color like the labels */
 .st-container:before {
   content: '';
@@ -79,6 +88,7 @@
   background: white;
   color: #cfcfcf;
   font-weight: 100;
+  text-decoration: none;
   -webkit-transition: background-color ease-out .3s;
   -moz-transition: background-color ease-out .3s;
   -o-transition: background-color ease-out .3s;
@@ -91,6 +101,7 @@
   background: white;
   color: #cfcfcf;
   font-weight: 100;
+  text-decoration: none;
   -webkit-transition: background-color ease-out .3s;
   -moz-transition: background-color ease-out .3s;
   -o-transition: background-color ease-out .3s;
@@ -99,6 +110,7 @@
 
 .st-container > input:hover + a:after {
   border-bottom-color: #cfcfcf;
+  text-decoration: none;
 }
 
 .st-scroll,
