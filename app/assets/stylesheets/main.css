@@ -16,7 +16,7 @@
   width: 20%;
   cursor: pointer;
   font-size: 16px;
-  height: 34px;
+  height: 54px;
   line-height: 34px;
 }
 
@@ -123,9 +123,27 @@
 }
 
 .st-panel{
-  background: #fff;
+  background: white;
   overflow: hidden;
 } 
+
+.st-bg {
+  background: white url('/assets/bg1.jpg') top;
+}
+
+#bgTxtme {
+  background-color: rgba(255, 255, 255, .9);
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1em;
+  text-align: center;
+  padding-bottom: 3em;
+  height: 240px;
+}
+
+.workaround {
+  padding-top: 17em;
+}
 
 #st-control-1:checked ~ .st-scroll {
   -webkit-transform: translateY(0%);
@@ -371,6 +389,7 @@
 
 /* Colored sections */
 
+
 .st-color,
 .st-deco{
   background: black;
@@ -379,7 +398,7 @@
   color: black;
 }
 .st-color .st-deco {
-  background: #fff;
+  background: #fff ;
 }
 .st-color h2 {
   color: #fff;
