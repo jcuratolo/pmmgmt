@@ -189,13 +189,21 @@ h1 {margin: 1.3em;}
 .centerBtn {
   width: 300px;
   margin: 0 auto;
-  margin-top: 6.5em;
+  margin-top: 8em;
   border: none;
   color: black;
   background-color: #ffd86d;
   font-family: 'Dosis', sans-serif;
   font-weight: 100;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
 
+.centerBtn:hover {
+  background: black;
+  color:white;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .logohome {
@@ -208,6 +216,15 @@ h1 {margin: 1.3em;}
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   z-index: 1000;
+}
+
+.myDownArrow {
+  width: 150px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 280px;
+  margin-left: -70px;
 }
 
 .logohome:hover {

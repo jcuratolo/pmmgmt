@@ -131,6 +131,11 @@
   background: white url('/assets/bg1.jpg') top;
 }
 
+.cenImage {
+  width: 185px;
+  margin: 0 auto;
+}
+
 #bgTxtme {
   background-color: rgba(255, 255, 255, .9);
   width: 80%;
