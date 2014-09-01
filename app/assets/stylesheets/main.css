@@ -140,7 +140,8 @@
 } 
 
 .st-bg {
-  background: white url('/assets/bg1.jpg') top;
+  background: white url('/assets/bg1.jpg') top no-repeat;
+  background-size: cover;
 }
 
 .cenImage {
