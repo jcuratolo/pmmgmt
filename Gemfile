@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'rails_12factor', group: :development
+gem 'rails_12factor', group: :production
 
 gem 'bootstrap-sass', '~> 3.2.0'
 
