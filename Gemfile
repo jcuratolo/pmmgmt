@@ -46,6 +46,11 @@ gem 'skrollr-rails'
 # Use unicorn as the app server
 gem 'unicorn'
 
+# #for angularjs to work nicely on rails
+# gem 'angularjs-rails'
+# gem 'angular-rails-templates'
+# gem 'active_model_serializers'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 

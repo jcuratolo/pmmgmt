@@ -158,6 +158,10 @@
   height: 340px;
 }
 
+#bgTxtme h2 {
+  padding-top: .5em;
+}
+
 .workaround {
   padding-top: 14em;
 }
