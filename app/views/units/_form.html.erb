@@ -13,41 +13,31 @@
 
   <div class="field">
     <%= u.label :building_id %> <br />
-    <%= u.collection_select :building_id, Building.all, :id, :bAddress1 %>
+    <%= u.collection_select :building_id, Building.all, :id, :bAddress1, autofocus: true, :class => "form-control" %>
   </div>
 
   <div class="field">
-    Unit Number <br />
-    <%= u.text_field :uNumber %>
+    <%= u.text_field :uNumber, :placeholder => "Unit #", autofocus: true, :class => "form-control" %>
   </div>
   
   <div class="field">
-    Type <br / >
-    <%= u.text_field :uType, placeholder: "condo, duplex, etc" %>
+    <%= u.text_field :uType, placeholder: "Type ex: condo, duplex, etc", autofocus: true, :class => "form-control" %>
   </div>
 
   <div class="field">
-    Number of Bedrooms <br /> 
-    <%= u.number_field :uBedroomCount %>
+    <%= u.number_field :uBedroomCount, :placeholder => "Number of Bedrooms", autofocus: true, :class => "form-control" %>
   </div>
 
   <div class="field">
-    Number of Bathrooms <br /> 
-    <%= u.number_field :uBathroomCount %>
+    <%= u.number_field :uBathroomCount, :placeholder => "Number of Bathrooms", autofocus: true, :class => "form-control" %>
   </div>
 
   <div class="field">
-    Square Footage <br /> 
-    <%= u.number_field :uSquareFootage %> sq ft
-  </div>
-
-  <div class="field">
-    List?
-    <%= u.check_box :listing %>
+    <%= u.number_field :uSquareFootage, :placeholder => "Square Footage", autofocus: true, :class => "form-control" %>
   </div>
 
   <div class="actions">
-    <%= u.submit %>
+    <%= u.submit "Add Unit", :class => "btn btn-default wideBtn" %>
   </div>
 <% end %>
 

@@ -1,16 +1,22 @@
-<br />
-<br />
-<br />
-<br />
+<div class="yelBg" style="width: 100%; height: 100%; background-color: #ffd86d; position: fixed; top: 0;">
 
-<h1>Buildings#new</h1>
-<p>Find me in app/views/buildings/new.html.erb</p>
+  <br />
+  <br />
 
+  <div class="container text-center">
 
+    <img class="logohome flipInY cenImage" src="/assets/pmlogo1.png" alt="logo">
 
-<%= render 'form' %>
+      <div class="text-center loginForm slideUp">
 
+          <h1>Add a property</h1>
+          
+          <%= render 'form' %>
 
+          <%= link_to 'Back', buildings_path %>
 
+      </div>
 
-<%= link_to 'Back', buildings_path %>
+  </div>
+
+</div>

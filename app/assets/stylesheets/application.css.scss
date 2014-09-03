@@ -24,13 +24,24 @@
 
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
+$font-stack:    'Dosis', sans-serif;
+$admin-color:   #ffd86d;
+
 .navbar-nav.nav-justified > li{
     float:none;
 }
 
+.newBg {
+  width: 100%;
+  height: 100%;
+  background-color: $admin-color;
+  position: fixed;
+  top: 0;
+}
+
 .logoTxt {
   margin-top: 0em;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-size: 3em;
   font-weight: 300;
 }
@@ -67,7 +78,7 @@
 h1 {margin: 1.3em;}
 
 .loginTxt {
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-size: 1.2em;
   padding-top: 1.3em;
 }
@@ -78,7 +89,7 @@ h1 {margin: 1.3em;}
   left: .4em;
   border: none;
   background-color: white;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
 }
 
 .myArrow {margin-top: 2.7em;}
@@ -159,6 +170,7 @@ h1 {margin: 1.3em;}
   position:relative;
   overflow:hidden;
 }
+
 .mycontainer .mytextbox {
   width:300px;
   height:225px;
@@ -180,7 +192,7 @@ h1 {margin: 1.3em;}
   padding-top: 75px;
   color: white;
   text-align: center;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-weight: 200;
   padding: 1em;
   margin-top: 4em;
@@ -193,7 +205,7 @@ h1 {margin: 1.3em;}
   border: none;
   color: black;
   background-color: #ffd86d;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-weight: 100;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -258,27 +270,27 @@ h1 {margin: 1.3em;}
 
 .navLinks {
   margin-top: 1.2em;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-size: 1.2em;
 }
 
 .mainTxtHead {
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   margin: 1.3em;
 }
 
 .loginForm {
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   width: 300px;
   margin: 0 auto;
   margin-top: 2em;
 
 }
 
-.loginBg {
+.yelBg {
   width: 100%;
   height: 100%;
-  background-color: #ffd86d;
+  background-color: $admin-color;
   position: fixed;
   top: 0;
 }
@@ -292,7 +304,7 @@ h1 {margin: 1.3em;}
 }
 
 .mapTxt {
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   margin-bottom: 2em;
 }
 
@@ -530,7 +542,7 @@ h1 {margin: 1.3em;}
     }
 
     .mobilelogoLink {
-      font-family: 'Dosis', sans-serif;
+      font-family: $font-stack;
       font-weight: 100;
       font-size: 2em;
     }
@@ -548,7 +560,7 @@ h1 {margin: 1.3em;}
     .dropLinks {
       list-style: none;
       text-align: center;
-      font-family: 'Dosis', sans-serif;
+      font-family: $font-stack;
       font-weight: 100;
       padding: .4em;
       margin-left: -1.8em;
