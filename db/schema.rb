@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140904184206) do
+ActiveRecord::Schema.define(version: 20140904230753) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,10 @@ ActiveRecord::Schema.define(version: 20140904184206) do
     t.datetime "updated_at"
     t.integer  "building_id"
     t.boolean  "uListing"
+    t.string   "unitimage_file_name"
+    t.string   "unitimage_content_type"
+    t.integer  "unitimage_file_size"
+    t.datetime "unitimage_updated_at"
   end
 
   add_index "units", ["building_id"], name: "index_units_on_building_id", using: :btree
