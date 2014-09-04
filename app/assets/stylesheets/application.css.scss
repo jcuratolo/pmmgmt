@@ -24,19 +24,110 @@
 
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
+$font-stack:    'Dosis', sans-serif;
+$admin-color:   #ffd86d;
+$primary-color:   #ffd86d;
+$grnbtn-color:  #53d81e;
+
 .navbar-nav.nav-justified > li{
     float:none;
 }
 
+.myfont {
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: left;
+}
+
+.listingimg {
+  float: left;
+  height: 100px;
+  width: auto;
+  margin-top: 3.8em;
+  margin-left: -2em;
+}
+
+.dashform {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.listingdescrip {
+  float: left;
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: left;
+  padding-top: 2em;
+  width: 50%;
+
+}
+
+.listings li {
+  list-style: none;
+  margin-bottom: 2em;
+}
+
+.fa {
+  display: block;
+}
+
+.ca {
+  color: green;
+}
+
+.textheadone {
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: right;
+  margin-right: 3em;
+}
+
+.listings {
+  width: 100%;
+  height: auto;
+  margin-top: -3em;
+}
+
+.listcol {
+  position: absolute;
+  margin-top: 10em;
+}
+
+.editlink:hover {
+  color:red;
+}
+
+.newBg {
+  width: 100%;
+  height: 100%;
+  background-color: $admin-color;
+  position: fixed;
+  top: 0;
+}
+
 .logoTxt {
   margin-top: 0em;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-size: 3em;
   font-weight: 300;
 }
 
+.newbtn {
+  border: none;
+  background-color: lightblue;
+}
+
+.addunit {
+  font-family: $font-stack;
+  font-weight: 100
+}
+
 .logoTxt:hover {
   color: #555;
+}
+
+.modal-dialog {
+  margin-left: -25%;
 }
 
 .myNavBar {
@@ -44,7 +135,7 @@
   top: 0;
   width: 100%;
   left: 0;
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, 1);
   height: 10em;
   z-index: 1000;
   border-radius: none;
@@ -67,7 +158,7 @@
 h1 {margin: 1.3em;}
 
 .loginTxt {
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-size: 1.2em;
   padding-top: 1.3em;
 }
@@ -78,7 +169,7 @@ h1 {margin: 1.3em;}
   left: .4em;
   border: none;
   background-color: white;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
 }
 
 .myArrow {margin-top: 2.7em;}
@@ -155,10 +246,12 @@ h1 {margin: 1.3em;}
 }
 
 
+
 .mycontainer {
   position:relative;
   overflow:hidden;
 }
+
 .mycontainer .mytextbox {
   width:300px;
   height:225px;
@@ -173,14 +266,37 @@ h1 {margin: 1.3em;}
 }
 
 .margin {
-  margin: 3em;
+  margin-top: 4em;
+  display: block;
+}
+
+.listingcol {
+  background-color: white;
+  height: auto;
+  border-radius: 10px;
+  margin-top: .5em;
+  float: right;
+}
+
+.mycontent {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.bgadmin {
+  background-color: $primary-color;
+  width: 100%;
+  height: 1400px;
+  display: block;
+
 }
 
 .mytext {
   padding-top: 75px;
   color: white;
   text-align: center;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-weight: 200;
   padding: 1em;
   margin-top: 4em;
@@ -193,7 +309,7 @@ h1 {margin: 1.3em;}
   border: none;
   color: black;
   background-color: #ffd86d;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-weight: 100;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -206,7 +322,7 @@ h1 {margin: 1.3em;}
   transition: all 0.4s ease;
 }
 
-.logohome {
+.logohom {
   font-weight:100;
   font-size: 4em;
   padding-top: -10.5em;
@@ -218,13 +334,24 @@ h1 {margin: 1.3em;}
   z-index: 1000;
 }
 
-.myDownArrow {
-  width: 150px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: 280px;
-  margin-left: -70px;
+.logohom:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.logohome {
+  font-weight:100;
+  font-size: 4em;
+  padding-top: -10.5em;
+  margin-top: 1em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
 }
 
 .logohome:hover {
@@ -235,9 +362,95 @@ h1 {margin: 1.3em;}
   transition: all 0.7s ease;
 }
 
+.fa-plus-square-o {
+  padding-top: .3em;
+}
+
+.myadmintxt {
+  font-weight: 100;
+  font-family: $font-stack;
+  margin-right: 2em;
+}
+
+.downimg {
+  font-weight:100;
+  font-size: 4em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+  margin-left: 1.5em;
+  margin-top: .4em;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.downImg:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.colone {
+  width: 50%;
+}
+
+.coltwo {
+  width: 50%;
+}
+
+
+.whitecolbg {
+  background-color: white;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 5;
+  position: relative;
+  margin-top: 15em;
+  float: right;
+}
+
+#margintest {
+  margin: .3em;
+}
+
+.myDownArrow {
+  width: 120px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 280px;
+  margin-left: -70px;
+}
+
+.moretxt {
+  line-height: 3em;
+}
+
 .btnCenter {
   width: 300px;
   margin: 0 auto;
+  margin-top: 0em;
+}
+
+.aboutimg {
+  width: 100%;
+  height: auto;
 }
 
 .mytextbox {
@@ -258,29 +471,42 @@ h1 {margin: 1.3em;}
 
 .navLinks {
   margin-top: 1.2em;
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   font-size: 1.2em;
 }
 
 .mainTxtHead {
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   margin: 1.3em;
 }
 
+.dashboardHead {
+  height: 100%;
+}
+
 .loginForm {
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   width: 300px;
   margin: 0 auto;
   margin-top: 2em;
 
 }
 
-.loginBg {
+.yelBg {
   width: 100%;
   height: 100%;
-  background-color: #ffd86d;
+  background-color: $admin-color;
   position: fixed;
   top: 0;
+}
+
+.yelBgtwo {
+  width: 100%;
+  height: 100%;
+  background-color: $admin-color;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .logoTxt > li > a {
@@ -292,7 +518,7 @@ h1 {margin: 1.3em;}
 }
 
 .mapTxt {
-  font-family: 'Dosis', sans-serif;
+  font-family: $font-stack;
   margin-bottom: 2em;
 }
 
@@ -474,6 +700,7 @@ h1 {margin: 1.3em;}
       margin-left: 17.1em;
     }
 
+
 }
 
 @media screen and (max-width: 800px) {
@@ -481,6 +708,7 @@ h1 {margin: 1.3em;}
 .mytextbox {
       margin-left: 17.2em;
     }
+
 
 }
 
@@ -530,7 +758,7 @@ h1 {margin: 1.3em;}
     }
 
     .mobilelogoLink {
-      font-family: 'Dosis', sans-serif;
+      font-family: $font-stack;
       font-weight: 100;
       font-size: 2em;
     }
@@ -548,7 +776,7 @@ h1 {margin: 1.3em;}
     .dropLinks {
       list-style: none;
       text-align: center;
-      font-family: 'Dosis', sans-serif;
+      font-family: $font-stack;
       font-weight: 100;
       padding: .4em;
       margin-left: -1.8em;
@@ -574,6 +802,7 @@ h1 {margin: 1.3em;}
       margin-left: 14.2em;
     }
 
+
 }
 
 @media screen and (max-width: 600px) {
@@ -581,6 +810,7 @@ h1 {margin: 1.3em;}
 .mytextbox {
       margin-left: 11.3em;
     }
+
 
 }
 
@@ -590,13 +820,15 @@ h1 {margin: 1.3em;}
       margin-left: 6.5em;
     }
 
+
 }
 
 @media screen and (max-width: 400px) {
 
 .mytextbox {
       margin-left: 3.7em;
-    }
+}
+
 
 }
 
