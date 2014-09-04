@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 20140904184206) do
     t.integer  "uBedroomCount"
     t.float    "uBathroomCount"
     t.integer  "uSquareFootage"
+    t.text     "uDescription"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "building_id"

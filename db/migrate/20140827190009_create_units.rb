@@ -6,6 +6,7 @@ class CreateUnits < ActiveRecord::Migration
       t.integer :uBedroomCount
       t.float :uBathroomCount
       t.integer :uSquareFootage
+      t.text :uDescription
 
       t.timestamps
     end
