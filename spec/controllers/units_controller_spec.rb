@@ -48,7 +48,7 @@ describe UnitsController do
     it "renders the :edit template" do
       unit = FactoryGirl.create(:unit)
       get :edit, id: unit
-      expect(response).to render_template :edit
+      expect(assigns(:unit)).to eq unit
     end
   end
 

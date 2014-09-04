@@ -1,12 +1,12 @@
 require 'faker'
 
 FactoryGirl.define do
-  factory :unit do |f|
-    f.uNumber { Faker::Number.number(1) }
-    f.uType { Faker::Name.name }
-    f.uBedroomCount { Faker::Number.number(1) }
-    f.uBathroomCount { Faker::Number.number(1) }
-    f.uSquareFootage { Faker::Number.number(4)}
-    f.building_id { Faker::Number.number(2) }
+  factory :unit do
+    uNumber { Faker::Number.number(1) }
+    uType { Faker::Name.name }
+    uBedroomCount { Faker::Number.number(1) }
+    uBathroomCount { Faker::Number.number(1) }
+    uSquareFootage { Faker::Number.number(4)}
+    building_id { Faker::Number.number(2) }
   end
 end
