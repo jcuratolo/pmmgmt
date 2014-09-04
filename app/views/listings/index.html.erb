@@ -11,19 +11,21 @@
 <br/>
 
 
-<p>buildings/index.html.erb</p>
+<p>LISTINGS/index.html.erb</p>
 <div class="container">
 <% @listings.each do |l| %>
         
-<%= l.lbAddressLine1 %> <br/>
+<%= l.bAddress1 %> #<%= l.uNumber %> <br/>
+<%= l.bCity %><br/>
+<%= l.bState %> <%= l.bZip %>
 
-
-
-<% end %>
+<li>Type: <%= l.uType %></li>
+<li># of Bedrooms = <%= l.uBedroomCount %> </li>
+<li># of Bathrooms = <%= l.uBathroomCount %> </li>
+<li>Square Footage = <%= l.uSquareFootage %> </li>
+<li> Description = <%= l.uDescription %> </li>
 <hr>
-
-
-
+<% end %>
 </div>
 
 
