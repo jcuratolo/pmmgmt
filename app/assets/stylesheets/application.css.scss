@@ -316,11 +316,31 @@ h1 {margin: 1.3em;}
   transition: all 0.4s ease;
 }
 
-.logohome {
+.logohom {
   font-weight:100;
   font-size: 4em;
   padding-top: -10.5em;
   margin-top: -.8em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+}
+
+.logohom:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.logohome {
+  font-weight:100;
+  font-size: 4em;
+  padding-top: -10.5em;
+  margin-top: 1em;
   opacity: .8;
   width: 185px;
   -webkit-transition: all 0.7s ease;
@@ -400,7 +420,7 @@ h1 {margin: 1.3em;}
 }
 
 .myDownArrow {
-  width: 150px;
+  width: 120px;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -411,6 +431,7 @@ h1 {margin: 1.3em;}
 .btnCenter {
   width: 300px;
   margin: 0 auto;
+  margin-top: -12em;
 }
 
 .mytextbox {
@@ -652,6 +673,10 @@ h1 {margin: 1.3em;}
       margin-left: 15.3em;
     }
 
+.btnCenter {
+    margin-top: -12em;
+  }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -660,6 +685,10 @@ h1 {margin: 1.3em;}
       margin-left: 17.1em;
     }
 
+.btnCenter {
+    margin-top: -12em;
+  }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -667,6 +696,10 @@ h1 {margin: 1.3em;}
 .mytextbox {
       margin-left: 17.2em;
     }
+
+ .btnCenter {
+    margin-top: -12em;
+  }
 
 }
 
@@ -751,6 +784,10 @@ h1 {margin: 1.3em;}
       background-color: white;
       color: #cfcfcf;
     }
+
+  .btnCenter {
+    margin-top: -12em;
+  }
  
 }
 
@@ -760,6 +797,10 @@ h1 {margin: 1.3em;}
       margin-left: 14.2em;
     }
 
+.btnCenter {
+  margin-top: -12em;
+}
+
 }
 
 @media screen and (max-width: 600px) {
@@ -767,6 +808,10 @@ h1 {margin: 1.3em;}
 .mytextbox {
       margin-left: 11.3em;
     }
+
+.btnCenter {
+  margin-top: -12em;
+}
 
 }
 
@@ -776,13 +821,21 @@ h1 {margin: 1.3em;}
       margin-left: 6.5em;
     }
 
+.btnCenter {
+  margin-top: -12em;
+}
+
 }
 
 @media screen and (max-width: 400px) {
 
 .mytextbox {
       margin-left: 3.7em;
-    }
+}
+
+.btnCenter {
+  margin-top: -13em;
+}
 
 }
 
