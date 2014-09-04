@@ -1,12 +1,13 @@
+
 require 'rails_helper'
 
-describe BuildingsController do
+describe UnitsController do
 
   describe 'GET #index' do
-    it "populates an array of buildings" do
-      building = FactoryGirl.create(:building)
+    it "populates an array of units" do
+      unit = FactoryGirl.create(:unit)
       get :index
-      expect(assigns(:buildings)).to match_array [building]
+      expect(assigns(:units)).to match_array [unit]
     end
     it "renders the :index view" do
       get :index
@@ -15,22 +16,22 @@ describe BuildingsController do
   end
 
   describe 'GET #show' do
-    it "assigns the requested building to @building" do
-      building = FactoryGirl.create(:building)
-      get :show, id: building
-      expect(assigns(:building)).to eq building
+    it "assigns the requested unit to @unit" do
+      unit = FactoryGirl.create(:unit)
+      get :show, id: unit
+      expect(assigns(:unit)).to eq unit
     end
     it "renders the :show template" do
-      building = FactoryGirl.create(:building)
-      get :show, id: building
+      unit = FactoryGirl.create(:unit)
+      get :show, id: unit
       expect(response).to render_template :show
     end
   end
 
   describe 'GET #new' do
-    it "assigns a new Building to @building" do
+    it "assigns a new Unit to @unit" do
       get :new
-      expect(assigns(:building)).to be_a_new(Building)
+      expect(assigns(:unit)).to be_a_new(Unit)
     end
     it "renders the :new template" do
       get :new
@@ -39,14 +40,14 @@ describe BuildingsController do
   end
 
   describe 'GET #edit' do
-    it "assigns the requested building to @building" do
-      building = FactoryGirl.create(:building)
-      get :edit, id: building
-      expect(assigns(:building)).to eq building
+    it "assigns the requested unit to @unit" do
+      unit = FactoryGirl.create(:unit)
+      get :edit, id: unit
+      expect(:unit).to eq unit
     end
     it "renders the :edit template" do
-      building = FactoryGirl.create(:building)
-      get :edit, id: building
+      unit = FactoryGirl.create(:unit)
+      get :edit, id: unit
       expect(response).to render_template :edit
     end
   end

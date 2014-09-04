@@ -59,6 +59,14 @@
 </div>
 
 <div class="text-center">
+  <h3>PROOVE THIS CRAP OUT</h3>
+  <%= text_field( :unit, :id ) %>
+  <%= %>
+  <% @units.each do |u| %>
+  <ul><li>Unit number:</li> 
+  <%= u.uNumber %></ul>
+<% end %>
+
 <h2 class="mapTxt">Check out our properties!</h2><br />
   </div>
 
