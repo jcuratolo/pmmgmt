@@ -1,6 +1,7 @@
 class UnitsController < ApplicationController
   def index
     @units = Unit.all
+    @unit = Unit.new
   end
   def show
     @unit = Unit.find(params[:id])
@@ -9,7 +10,9 @@ class UnitsController < ApplicationController
     @unit = Unit.new
   end
   def create
-    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id))
+
+    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription))
+
       if @unit.save
         redirect_to units_path
       else 

@@ -1,54 +1,54 @@
-<%= form_for @building do |b| %>
-  <% if @building.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@building.errors.count, "error") %> prohibited this building from being saved:</h2>
+  <div class="form-group">
 
-      <ul>
-      <% @building.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+    <%= form_for @building do |b| %>
+      <% if @building.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@building.errors.count, "error") %> prohibited this building from being saved:</h2>
+
+          <ul>
+          <% @building.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    Name <br />
-    <%= b.text_field :bName %>
-  </div>
-  
-  <div class="field">
-    Address <br / >
-    <%= b.text_field :bAddress1, placeholder: "#, line 1" %>
-  </div>
+      <div class="field">
+        <%= b.text_field :bName, autofocus: true, :placeholder => "Property Name", :class => "form-control" %>
+      </div>
+      
+      <div class="field">
+        <%= b.text_field :bAddress1, autofocus: true, :placeholder => "Address", :class => "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= b.text_field :bAddress2, placeholder: "line 2" %>
-  </div>
+      <div class="field">
+        <%= b.text_field :bAddress2, autofocus: true, :placeholder => "Line 2", :class => "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= b.text_field :bCity, placeholder: "city" %>
-  </div>
-  
-  <div class="field">
-    <%= b.text_field :bState, placeholder: "state" %>
-  </div>
+      <div class="field">
+        <%= b.text_field :bCity, autofocus: true, :placeholder => "City", :class => "form-control" %>
+      </div>
+      
+      <div class="field">
+        <%= b.text_field :bState, placeholder: "State", autofocus: true, :class => "form-control" %>
+      </div>
 
-  <div class="field">
-    <%= b.text_field :bZip, placeholder: "zip" %>
-  </div>
+      <div class="field">
+        <%= b.text_field :bZip, placeholder: "Zip", autofocus: true, :class => "form-control" %>
+      </div>
 
-  <div class="field">
-    Phone number <br />
-    <%= b.text_field :bPhone, placeholder: "phone number" %>
-  </div>
+      <div class="field">
+        <%= b.text_field :bPhone, placeholder: "Phone Number", autofocus: true, :class => "form-control" %>
+      </div>
 
-   <div class="field">
-    Number of Units <br />
-    <%= b.text_field :bUnitCount, placeholder: "number of units" %>
-  </div>
+       <div class="field">
+        <%= b.text_field :bUnitCount, placeholder: "Number of Units", autofocus: true, :class => "form-control" %>
+      </div>
 
-  <div class="actions">
-    <%= b.submit %>
+      <div class="actions">
+        <%= b.submit %>
+      </div>
+    <% end %>
+
   </div>
-<% end %>
 

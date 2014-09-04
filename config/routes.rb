@@ -4,6 +4,7 @@ Pmmgmt::Application.routes.draw do
   resources  :building_features
   resources  :unit_features
   devise_for :users
+  resources  :listings
   # resources  :sessions
   root 'static#index'
 

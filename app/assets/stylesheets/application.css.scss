@@ -1,0 +1,825 @@
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require font-awesome
+ */
+
+/*@import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);*/
+
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,400,700);
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+
+@import 'bootstrap';
+@import "font-awesome";
+
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+
+$font-stack:    'Dosis', sans-serif;
+$admin-color:   #ffd86d;
+$primary-color:   #ffd86d;
+$grnbtn-color:  #53d81e;
+
+.navbar-nav.nav-justified > li{
+    float:none;
+}
+
+.myfont {
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: left;
+}
+
+.listingimg {
+  float: left;
+  height: 100px;
+  width: auto;
+  margin-top: 3.8em;
+  margin-left: -2em;
+}
+
+.dashform {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.listingdescrip {
+  float: left;
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: left;
+  padding-top: 2em;
+  width: 50%;
+
+}
+
+.listings li {
+  list-style: none;
+  margin-bottom: 2em;
+}
+
+.fa {
+  display: block;
+}
+
+.ca {
+  color: green;
+}
+
+.textheadone {
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: right;
+  margin-right: 3em;
+}
+
+.listings {
+  width: 100%;
+  height: auto;
+  margin-top: -3em;
+}
+
+.listcol {
+  position: absolute;
+  margin-top: 10em;
+}
+
+.editlink:hover {
+  color:red;
+}
+
+.newBg {
+  width: 100%;
+  height: 100%;
+  background-color: $admin-color;
+  position: fixed;
+  top: 0;
+}
+
+.logoTxt {
+  margin-top: 0em;
+  font-family: $font-stack;
+  font-size: 3em;
+  font-weight: 300;
+}
+
+.newbtn {
+  border: none;
+  background-color: lightblue;
+}
+
+.addunit {
+  font-family: $font-stack;
+  font-weight: 100
+}
+
+.logoTxt:hover {
+  color: #555;
+}
+
+.modal-dialog {
+  margin-left: -25%;
+}
+
+.myNavBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 1);
+  height: 10em;
+  z-index: 1000;
+  border-radius: none;
+  border: none !important;
+  -webkit-transition: background-color ease-out .3s;
+  -moz-transition: background-color ease-out .3s;
+  -o-transition: background-color ease-out .3s;
+  transition: background-color ease-out .3s;
+}
+
+.myNavBar:hover {
+  background-color: rgba(255, 255, 255, 1);
+  -webkit-transition: background-color ease-out .3s;
+  -moz-transition: background-color ease-out .3s;
+  -o-transition: background-color ease-out .3s;
+  transition: background-color ease-out .3s;
+
+}
+
+h1 {margin: 1.3em;}
+
+.loginTxt {
+  font-family: $font-stack;
+  font-size: 1.2em;
+  padding-top: 1.3em;
+}
+
+.logOutBtn {
+  position: fixed;
+  top: .4em;
+  left: .4em;
+  border: none;
+  background-color: white;
+  font-family: $font-stack;
+}
+
+.myArrow {margin-top: 2.7em;}
+
+.carousel-control:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.navWidth {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slideDown{
+  animation-name: slideDown;
+  -webkit-animation-name: slideDown;  
+
+  animation-duration: 1.2s; 
+  -webkit-animation-duration: 1.2s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;  
+
+  visibility: visible !important;           
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-40%);
+  }
+  100% {
+    transform: translateY(0%);
+  }   
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-40%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  } 
+}
+
+.slideUp{
+  animation-name: slideUp;
+  -webkit-animation-name: slideUp;  
+
+  animation-duration: 1s; 
+  -webkit-animation-duration: 1s;
+
+  animation-timing-function: ease;  
+  -webkit-animation-timing-function: ease;
+
+  visibility: visible !important;     
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(0%);
+  } 
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(15%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+  } 
+}
+
+
+
+.mycontainer {
+  position:relative;
+  overflow:hidden;
+}
+
+.mycontainer .mytextbox {
+  width:300px;
+  height:225px;
+  position:absolute;
+  top:0;
+  left:0;
+  margin-top:-225px;
+  background-color: rgba(0,0,0,0.75);
+}
+.mycontainer:hover .mytextbox {
+  margin-top:0;
+}
+
+.margin {
+  margin-top: 4em;
+  display: block;
+}
+
+.listingcol {
+  background-color: white;
+  height: auto;
+  border-radius: 10px;
+  margin-top: .5em;
+  float: right;
+}
+
+.mycontent {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.bgadmin {
+  background-color: $primary-color;
+  width: 100%;
+  height: 1400px;
+  display: block;
+
+}
+
+.mytext {
+  padding-top: 75px;
+  color: white;
+  text-align: center;
+  font-family: $font-stack;
+  font-weight: 200;
+  padding: 1em;
+  margin-top: 4em;
+}
+
+.centerBtn {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 8em;
+  border: none;
+  color: black;
+  background-color: #ffd86d;
+  font-family: $font-stack;
+  font-weight: 100;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.centerBtn:hover {
+  background: black;
+  color:white;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.logohom {
+  font-weight:100;
+  font-size: 4em;
+  padding-top: -10.5em;
+  margin-top: -.8em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+}
+
+.logohom:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.logohome {
+  font-weight:100;
+  font-size: 4em;
+  padding-top: -10.5em;
+  margin-top: 1em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+}
+
+.logohome:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.fa-plus-square-o {
+  padding-top: .3em;
+}
+
+.myadmintxt {
+  font-weight: 100;
+  font-family: $font-stack;
+  margin-right: 2em;
+}
+
+.downimg {
+  font-weight:100;
+  font-size: 4em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+  margin-left: 1.5em;
+  margin-top: .4em;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.downImg:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.colone {
+  width: 50%;
+}
+
+.coltwo {
+  width: 50%;
+}
+
+
+.whitecolbg {
+  background-color: white;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 5;
+  position: relative;
+  margin-top: 15em;
+  float: right;
+}
+
+#margintest {
+  margin: .3em;
+}
+
+.myDownArrow {
+  width: 120px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 280px;
+  margin-left: -70px;
+}
+
+.moretxt {
+  line-height: 3em;
+}
+
+.btnCenter {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 0em;
+}
+
+.aboutimg {
+  width: 100%;
+  height: auto;
+}
+
+.mytextbox {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  margin-left: 1.33em;
+}
+
+.slideTxt {
+  box-shadow: none;
+}
+
+.linkHover:hover {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+}
+
+.navLinks {
+  margin-top: 1.2em;
+  font-family: $font-stack;
+  font-size: 1.2em;
+}
+
+.mainTxtHead {
+  font-family: $font-stack;
+  margin: 1.3em;
+}
+
+.dashboardHead {
+  height: 100%;
+}
+
+.loginForm {
+  font-family: $font-stack;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 2em;
+
+}
+
+.yelBg {
+  width: 100%;
+  height: 100%;
+  background-color: $admin-color;
+  position: fixed;
+  top: 0;
+}
+
+.yelBgtwo {
+  width: 100%;
+  height: 100%;
+  background-color: $admin-color;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.logoTxt > li > a {
+  color: black !important;
+}
+
+.logoLink a:hover {
+  color: #cfcfcf;
+}
+
+.mapTxt {
+  font-family: $font-stack;
+  margin-bottom: 2em;
+}
+
+.fadeIn{
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn; 
+
+  animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s;
+
+  animation-timing-function: ease-in-out; 
+  -webkit-animation-timing-function: ease-in-out;   
+
+  visibility: visible !important; 
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(.9);
+    opacity: 0.0;   
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1; 
+  }   
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(.9);
+    opacity: 0.0;   
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1; 
+  }   
+}
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    -ms-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+    -ms-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  -ms-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.dropmenunav {
+      display: none;
+}
+
+.mobileMarg {
+  display: none;
+}
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    .mytextbox {
+      margin-left: .55em;
+    }
+ 
+}
+
+@media screen and (max-width: 987px) {
+
+.mytextbox {
+      margin-left: 7.3em;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+.mytextbox {
+      margin-left: 7.3em;
+    }
+
+
+}
+
+@media screen and (max-width: 800px) {
+
+.mytextbox {
+      margin-left: 7.3em;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .posFix {
+      position: fixed;
+      top: 0em;
+      z-index: 10000;
+      background-color: white;
+      width: 100%;
+    }
+
+    .mySlider {
+      margin-top: 4.5em;
+    }
+
+    .myNavBar {
+      display: none !important;
+    }
+
+    .dropmenunav {
+      display: block;
+    }
+
+    .margin {
+      display: none;
+    }
+
+    .mobileNav {
+        display: block;
+        height: 4.4em;
+        padding: 1.3em;
+    }
+
+    .mobileNav li a {
+      margin-top: -1em;
+      font-size: 1em !important;
+      
+    }
+
+    .fa-sort-desc {
+      color: #cfcfcf;
+      margin-top: -.3em;
+      position: fixed;
+      right: 1em;
+    }
+
+    .mobilelogoLink {
+      font-family: $font-stack;
+      font-weight: 100;
+      font-size: 2em;
+    }
+
+    .mobileNav a.mobilelogoLink:hover {
+      text-decoration: none;
+      background-color: white;
+      color: #cfcfcf;
+    }
+
+    header p {
+      display: none;
+    }
+
+    .dropLinks {
+      list-style: none;
+      text-align: center;
+      font-family: $font-stack;
+      font-weight: 100;
+      padding: .4em;
+      margin-left: -1.8em;
+      font-size: 1.2em;
+      width: 100%;
+    }
+
+    .dropLinks a {
+      width: 100%;
+    }
+
+    .dropLinks a:hover {
+      text-decoration: none;
+      background-color: white;
+      color: #cfcfcf;
+    }
+}
+
+@media screen and (max-width: 700px) {
+  .mytextbox {
+    margin-left: 5.6em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+   .mytextbox {
+    margin-left: 4.6em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+   .mytextbox {
+    margin-left: 1.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+   .mytextbox {
+    margin-left: 1.5em;
+  }
+
+}
+
