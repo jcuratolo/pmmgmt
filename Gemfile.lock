@@ -108,7 +108,12 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+<<<<<<< HEAD
     slop (3.6.0)
+=======
+    skrollr-rails (0.6.26)
+      rails (>= 3.1.0)
+>>>>>>> master
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -208,6 +213,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails (~> 4.0.2)
   sdoc
+  skrollr-rails
   turbolinks
   uglifier (>= 1.3.0)
   unicorn
