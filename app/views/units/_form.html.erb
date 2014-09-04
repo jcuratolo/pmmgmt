@@ -1,4 +1,4 @@
-<%= form_for @unit do |u| %>
+<%= form_for @unit, html: { multipart: true } do |u| %>
   <% if @unit.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
@@ -36,8 +36,12 @@
     <%= u.number_field :uSquareFootage, :placeholder => "Square Footage", autofocus: true, :class => "form-control" %>
   </div>
 
-    <div class="field">
+  <div class="field">
     <%= u.text_area :uDescription, :placeholder => "Description", autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= u.file_field :unitimage %>
   </div>
 
   <div class="field">
