@@ -9,6 +9,7 @@
   background-color: white;
 }
 
+
 .st-container > input,
 .st-container > a {
   position: fixed;
@@ -24,6 +25,7 @@
   opacity: 0;
   z-index: 1000;
 }
+
 
 .st-container > a {
   z-index: 10;
@@ -144,11 +146,6 @@
   background-size: cover;
 }
 
-.cenImage {
-  width: 185px;
-  margin: 0 auto;
-}
-
 #bgTxtme {
   background-color: rgba(255, 255, 255, .9);
   width: 80%;
@@ -260,6 +257,23 @@
   margin: -65px 0 0 0;
   padding: 0;
   top: 50%;
+  -webkit-backface-visibility: hidden;
+}
+
+.visiontxt {
+  color: black;
+  position: relative !important;
+  font-size: 54px;
+  font-weight: 900;
+  width: 80%;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 100;
+  left: 10%;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+  margin-top: -2em !important;
+  padding-bottom: 1em;
   -webkit-backface-visibility: hidden;
 }
 
@@ -533,21 +547,35 @@ h3 a:hover {
   font-weight: 100;
 }
 
+@media screen and (max-width: 940px) {
+
+.visiontxt {
+  margin-top: -2.4em !important;
+}
+
+}
+
 @media screen and (max-width: 520px) {
-  .st-panel h2 {
-    font-size: 42px;
-  }
   
   .st-panel p {
     width: 90%;
     left: 5%;
     margin-top: 0;
   }
+
+  .visiontxt {
+    margin-top: -2.7em !important;
+  }
   
   .st-container > a {
     font-size: 13px;
   }
 }
+
+@media screen and (max-width: 400px) {
+
+}
+
 @media screen and (max-width: 360px) {
   .st-container > a {
     font-size: 10px;
