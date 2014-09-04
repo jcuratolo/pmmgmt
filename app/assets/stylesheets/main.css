@@ -243,8 +243,26 @@
   font-weight: 100;
 }
 
+.st-panel h2 {
+  color: black;
+  position: absolute;
+  font-size: 54px;
+  font-weight: 900;
+  width: 80%;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 100;
+  left: 10%;
+  text-align: center;
+  line-height: 50px;
+  margin: -65px 0 0 0;
+  padding: 0;
+  top: 50%;
+  -webkit-backface-visibility: hidden;
+}
+
 .visiontxt {
   color: black;
+  position: relative !important;
   font-size: 54px;
   font-weight: 900;
   width: 80%;
@@ -254,8 +272,8 @@
   text-align: center;
   line-height: 50px;
   margin: 0 auto;
-  padding: 0;
-  top: 50%;
+  margin-top: -2em !important;
+  padding-bottom: 1em;
   -webkit-backface-visibility: hidden;
 }
 
@@ -529,15 +547,24 @@ h3 a:hover {
   font-weight: 100;
 }
 
+@media screen and (max-width: 940px) {
+
+.visiontxt {
+  margin-top: -2.4em !important;
+}
+
+}
+
 @media screen and (max-width: 520px) {
-  .visiontxt {
-    font-size: 42px;
-  }
   
   .st-panel p {
     width: 90%;
     left: 5%;
     margin-top: 0;
+  }
+
+  .visiontxt {
+    margin-top: -2.7em !important;
   }
   
   .st-container > a {
@@ -546,9 +573,6 @@ h3 a:hover {
 }
 
 @media screen and (max-width: 400px) {
-  .visiontxt {
-    margin-top: .4em;
-  }
 
 }
 
