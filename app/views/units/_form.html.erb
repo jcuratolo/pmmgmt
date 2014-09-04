@@ -36,6 +36,10 @@
     <%= u.number_field :uSquareFootage, :placeholder => "Square Footage", autofocus: true, :class => "form-control" %>
   </div>
 
+    <div class="field">
+    <%= u.text_area :uDescription, :placeholder => "Description", autofocus: true, :class => "form-control" %>
+  </div>
+
   <div class="field">
         List?
     <%= u.check_box :uListing %>
