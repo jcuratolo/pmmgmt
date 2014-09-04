@@ -1,13 +1,17 @@
 require 'faker'
 
 FactoryGirl.define do
-  factory :building do |f|
-    f.bName { Faker::Name.name }
-    f.bAddress1 { Faker::Address.street_address }
-    f.bCity { Faker::Address.city }
-    f.bState { Faker::Address.state }
-    f.bZip { Faker::Address.zip }
-    f.bPhone { Faker::PhoneNumber.phone_number }
-    f.bUnitCount { Faker::Number.number(3) }
+  factory :building do
+    bName { Faker::Name.name }
+    bAddress1 { Faker::Address.street_address }
+    bCity { Faker::Address.city }
+    bState { Faker::Address.state }
+    bZip { Faker::Address.zip }
+    bPhone { Faker::PhoneNumber.phone_number }
+    bUnitCount { Faker::Number.number(3) }
+
+    factory :invalid_building do
+      bName nil
+    end
   end
 end
