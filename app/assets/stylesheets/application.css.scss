@@ -456,7 +456,7 @@ h1 {margin: 1.3em;}
 .mytextbox {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
-  margin-left: 3.3em;
+  margin-left: 1.33em;
 }
 
 .slideTxt {
@@ -681,7 +681,7 @@ h1 {margin: 1.3em;}
 @media screen and (max-width: 1200px) {
 
     .mytextbox {
-      margin-left: 1.2em;
+      margin-left: .55em;
     }
  
 }
@@ -689,7 +689,7 @@ h1 {margin: 1.3em;}
 @media screen and (max-width: 987px) {
 
 .mytextbox {
-      margin-left: 15.3em;
+      margin-left: 7.3em;
     }
 
 }
@@ -697,7 +697,7 @@ h1 {margin: 1.3em;}
 @media screen and (max-width: 900px) {
 
 .mytextbox {
-      margin-left: 17.1em;
+      margin-left: 7.3em;
     }
 
 
@@ -706,7 +706,7 @@ h1 {margin: 1.3em;}
 @media screen and (max-width: 800px) {
 
 .mytextbox {
-      margin-left: 17.2em;
+      margin-left: 7.3em;
     }
 
 
@@ -793,42 +793,33 @@ h1 {margin: 1.3em;}
       background-color: white;
       color: #cfcfcf;
     }
- 
 }
 
 @media screen and (max-width: 700px) {
-
-.mytextbox {
-      margin-left: 14.2em;
-    }
-
-
+  .mytextbox {
+    margin-left: 5.6em;
+  }
 }
 
 @media screen and (max-width: 600px) {
 
-.mytextbox {
-      margin-left: 11.3em;
-    }
-
-
+   .mytextbox {
+    margin-left: 4.6em;
+  }
 }
 
 @media screen and (max-width: 500px) {
 
-.mytextbox {
-      margin-left: 6.5em;
-    }
-
-
+   .mytextbox {
+    margin-left: 1.5em;
+  }
 }
 
 @media screen and (max-width: 400px) {
 
-.mytextbox {
-      margin-left: 3.7em;
-}
-
+   .mytextbox {
+    margin-left: 1.5em;
+  }
 
 }
 
