@@ -1,6 +1,7 @@
 class UnitsController < ApplicationController
   def index
     @units = Unit.all
+    @unit = Unit.new
   end
   def show
     @unit = Unit.find(params[:id])

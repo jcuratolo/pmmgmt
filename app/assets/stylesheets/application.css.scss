@@ -26,9 +26,69 @@
 
 $font-stack:    'Dosis', sans-serif;
 $admin-color:   #ffd86d;
+$primary-color:   #ffd86d;
+$grnbtn-color:  #53d81e;
 
 .navbar-nav.nav-justified > li{
     float:none;
+}
+
+.listingimg {
+  float: left;
+  height: 100px;
+  width: auto;
+  margin-top: 2.6em;
+  margin-left: -2em;
+}
+
+.dashform {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.listingdescrip {
+  float: left;
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: left;
+  padding-top: 2em;
+  width: 50%;
+
+}
+
+.listings li {
+  list-style: none;
+  margin-bottom: 2em;
+}
+
+.fa {
+  display: block;
+}
+
+.ca {
+  color: green;
+}
+
+.textheadone {
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: right;
+  margin-right: 3em;
+}
+
+.listings {
+  width: 100%;
+  height: auto;
+  margin-top: -3em;
+}
+
+.listcol {
+  position: absolute;
+  margin-top: 10em;
+}
+
+.editlink:hover {
+  color:red;
 }
 
 .newBg {
@@ -46,8 +106,22 @@ $admin-color:   #ffd86d;
   font-weight: 300;
 }
 
+.newbtn {
+  border: none;
+  background-color: lightblue;
+}
+
+.addunit {
+  font-family: $font-stack;
+  font-weight: 100
+}
+
 .logoTxt:hover {
   color: #555;
+}
+
+.modal-dialog {
+  margin-left: -25%;
 }
 
 .myNavBar {
@@ -166,6 +240,7 @@ h1 {margin: 1.3em;}
 }
 
 
+
 .mycontainer {
   position:relative;
   overflow:hidden;
@@ -185,7 +260,30 @@ h1 {margin: 1.3em;}
 }
 
 .margin {
-  margin: 3em;
+  margin-top: 4em;
+  display: block;
+}
+
+.listingcol {
+  background-color: white;
+  height: auto;
+  border-radius: 10px;
+  margin-top: .5em;
+  float: right;
+}
+
+.mycontent {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.bgadmin {
+  background-color: $primary-color;
+  width: 100%;
+  height: 1400px;
+  display: block;
+
 }
 
 .mytext {
@@ -230,6 +328,77 @@ h1 {margin: 1.3em;}
   z-index: 1000;
 }
 
+.logohome:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.fa-plus-square-o {
+  padding-top: .3em;
+}
+
+.myadmintxt {
+  font-weight: 100;
+  font-family: $font-stack;
+  margin-right: 2em;
+}
+
+.downimg {
+  font-weight:100;
+  font-size: 4em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+  margin-left: 1.5em;
+  margin-top: .4em;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.downImg:hover {
+  font-weight:100;
+  font-size: 4em;
+  opacity: 1;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.colone {
+  width: 50%;
+}
+
+.coltwo {
+  width: 50%;
+}
+
+
+.whitecolbg {
+  background-color: white;
+  border-radius: 4px;
+  width: 100%;
+  height: auto;
+  display: block;
+  z-index: 5;
+  position: relative;
+  margin-top: 15em;
+  float: right;
+}
+
 .myDownArrow {
   width: 150px;
   position: fixed;
@@ -237,14 +406,6 @@ h1 {margin: 1.3em;}
   left: 50%;
   margin-top: 280px;
   margin-left: -70px;
-}
-
-.logohome:hover {
-  font-weight:100;
-  font-size: 4em;
-  opacity: 1;
-  -webkit-transition: all 0.7s ease;
-  transition: all 0.7s ease;
 }
 
 .btnCenter {
@@ -279,6 +440,10 @@ h1 {margin: 1.3em;}
   margin: 1.3em;
 }
 
+.dashboardHead {
+  height: 100%;
+}
+
 .loginForm {
   font-family: $font-stack;
   width: 300px;
@@ -293,6 +458,15 @@ h1 {margin: 1.3em;}
   background-color: $admin-color;
   position: fixed;
   top: 0;
+}
+
+.yelBgtwo {
+  width: 100%;
+  height: 100%;
+  background-color: $admin-color;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
 }
 
 .logoTxt > li > a {
