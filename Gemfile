@@ -58,4 +58,14 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 
+group :development, :test do
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+end
+
+group :test do
+  gem "faker"
+  gem "capybara"
+end
+
 ruby "2.0.0"
