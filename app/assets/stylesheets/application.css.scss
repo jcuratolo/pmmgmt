@@ -33,6 +33,12 @@ $grnbtn-color:  #53d81e;
     float:none;
 }
 
+.myfont {
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: left;
+}
+
 .listingimg {
   float: left;
   height: 100px;
@@ -419,6 +425,10 @@ h1 {margin: 1.3em;}
   float: right;
 }
 
+#margintest {
+  margin: .3em;
+}
+
 .myDownArrow {
   width: 120px;
   position: fixed;
@@ -428,10 +438,19 @@ h1 {margin: 1.3em;}
   margin-left: -70px;
 }
 
+.moretxt {
+  line-height: 3em;
+}
+
 .btnCenter {
   width: 300px;
   margin: 0 auto;
   margin-top: 0em;
+}
+
+.aboutimg {
+  width: 100%;
+  height: auto;
 }
 
 .mytextbox {
