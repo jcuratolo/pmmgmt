@@ -1,22 +1,21 @@
 class UnitsController < ApplicationController
+  
   def index
     @units = Unit.all
     @unit = Unit.new
   end
+
   def show
     @unit = Unit.find(params[:id])
   end
+
   def new
     @unit = Unit.new
   end
+
   def create
-<<<<<<< HEAD
+    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage))
 
-    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription))
-
-=======
-    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :uDescription, :unitimage, :building_id))
->>>>>>> imageupload
       if @unit.save
         redirect_to units_path
       else 
