@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905175244) do
+ActiveRecord::Schema.define(version: 20140905175904) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20140905175244) do
     t.string   "unitimage_content_type"
     t.integer  "unitimage_file_size"
     t.datetime "unitimage_updated_at"
-    t.float    "price"
+    t.float    "uPrice"
   end
 
   add_index "units", ["building_id"], name: "index_units_on_building_id", using: :btree
