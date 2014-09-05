@@ -1,0 +1,3 @@
+class Listing < ActiveRecord::Base
+  has_many :buildings
+end

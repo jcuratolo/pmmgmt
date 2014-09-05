@@ -8,7 +8,7 @@ Pmmgmt::Application.routes.draw do
   # resources  :sessions
   # json API
   scope '/api/' do
-    resources :listings defaults: { format: :json }
+    resources :listings, defaults: { format: :json }
   end
   root 'static#index'
 
