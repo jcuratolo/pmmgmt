@@ -8,5 +8,9 @@ FactoryGirl.define do
     uBathroomCount { Faker::Number.number(1) }
     uSquareFootage { Faker::Number.number(4)}
     building_id { Faker::Number.number(2) }
+
+    factory :invalid_unit do
+      uType nil
+    end
   end
 end

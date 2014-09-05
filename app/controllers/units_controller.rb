@@ -26,9 +26,11 @@ class UnitsController < ApplicationController
   end
 
   def edit
+    @unit = Unit.find(params[:id])
   end
 
   def update
+    Unit.find(params[:id]).update(params.require(:unit).permit(:uType))
   end
 
 end
