@@ -40,6 +40,8 @@ gem 'font-awesome-rails', '~> 4.1.0.0'
 
 gem 'skrollr-rails'
 
+gem 'paperclip', '~> 4.2.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -56,7 +58,6 @@ gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
 
 group :development, :test do
   gem 'rspec-rails'
