@@ -14,7 +14,7 @@ class UnitsController < ApplicationController
   end
 
   def create
-    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :uDescription, :unitimage, :building_id))
+    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage))
 
       if @unit.save
         redirect_to units_path
