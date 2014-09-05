@@ -13,6 +13,12 @@
 
 <p>LISTINGS/index.html.erb</p>
 <div class="container">
+
+  <%= form_for @listing_report, url: {action: "edit"}, html: {class: "nifty_form"} do |f| %>
+  <%= f.text_field :title %>
+  <%= f.text_area :body, size: "60x12" %>
+  <%= f.submit "Create" %>
+<% end %>
 <% @listings.each do |l| %>
         
 <%= l.bAddress1 %> #<%= l.uNumber %> <br/>

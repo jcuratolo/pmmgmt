@@ -6,6 +6,10 @@ Pmmgmt::Application.routes.draw do
   devise_for :users
   resources  :listings
   # resources  :sessions
+  # json API
+  scope '/api/' do
+    resources :listings defaults: { format: :json }
+  end
   root 'static#index'
 
   
