@@ -14,6 +14,7 @@ Pmmgmt::Application.routes.draw do
     #resources :listings #defaults: { format: :json }
     get '/listings', to: 'listings#api', defaults: {:format=>:json}
     #resources :listings, only: :api#, defaults: { format: :json }
+  end
 
   root 'static#index'
 
