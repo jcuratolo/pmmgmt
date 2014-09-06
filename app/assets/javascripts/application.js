@@ -18,6 +18,19 @@
 //= require skrollr.menu
 //= require_tree .
 
+$(document).ready(function () {
+
+    $('#tabs').tab();
+
+    $('#tabs a').click(function (e) {
+      $('ul.nav-tabs li.active').removeClass('active')
+      $(this).parent('li').addClass('active')
+
+    $(".scroll-area").scrollspy({target: "#myNavbar"}) 
+
+});
+
+
 $(document).ready(function(){
 
 
@@ -44,5 +57,20 @@ $(document).ready(function(){
     }
   });
 }); 
+
+
+
+
+  // $("#sectab").hide(500);
+
+  //    $("#tabone").click(function(){
+  //       $("#firsttab").show(500);  
+  //       $("#sectab").hide(500);
+  //    });
+
+  //    $("#tabtwo").click(function(){
+  //       $("#sectab").show(500);
+  //       $("#firsttab").hide(500);  
+  //    });
 
 }); 
