@@ -2,19 +2,21 @@
 
 <script>
 function initialize() {
-
+console.log("Inside initialize");
 //data for pop-up info windows
-    var places = [{
-    lat: <%= Building.last.latitude %>,
-    lng: <%= Building.last.longitude %>,
-    title: '<li><%= Building.last.bName %></li>'+
-    '<li><%=Building.last.bAddress1%></li>' 
-    },
-    {
-    lat: 34.112836,
-    lng: -118.495338,
-    title: 'property' 
-    }];
+var places = [ <% for i in 0..@buildings.length-2 do %>
+{
+  lat:    <%= @buildings[i].latitude %>,
+  lng:    <%= @buildings[i].longitude %>,
+  title: "<%= @buildings[i].bName %>"
+},
+<% end %>
+{
+  lat:   <%= @buildings.last.latitude %>
+  lng:   <%= @buildings.last.longitude %>
+  title: "<%= @buildings.last.bName %>"
+}];
+console.log("after erb"); 
 
 
     //map options object
@@ -25,13 +27,13 @@ function initialize() {
     //  styles: style
     //  };
   //map initialize
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-      zoom: 8,
+  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    zoom: 8,
     center: new google.maps.LatLng(34.012836,-118.495338),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-        
-    });
-      
+
+  });
+
 
 
     //infowindows initialize
@@ -46,23 +48,23 @@ function initialize() {
         animation: google.maps.Animation.DROP
       });
 
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
           infowindow.setContent(places[i].title);
           infowindow.open(map, marker);
         }
       })(marker, i));
+    }
   }
-}
 
-google.maps.event.addDomListener(window, 'load', initialize);
+  google.maps.event.addDomListener(window, 'load', initialize);
 
-</script>
+  </script>
 
-<div class="row"> 
-  
-  <div style="margin-bottom:30px;" id="map-canvas"></div>
-  
-</div>
+  <div class="row"> 
+
+    <div style="margin-bottom:30px;" id="map-canvas"></div>
+
+  </div>
 
 </iframe>
