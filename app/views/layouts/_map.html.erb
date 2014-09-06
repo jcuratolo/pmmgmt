@@ -4,15 +4,13 @@
 function initialize() {
 console.log("Inside initialize");
 
-
-
-//data for pop-up info windows
+// Here is where we insert the buildings into an array of js objects. 
     var places = [
     <% for i in 0..@buildings.length-1 do %>
     {
       lat: <%= @buildings[i].latitude %>,
       lng: <%= @buildings[i].longitude %>,
-      title: '<h1><%=@buildings[i].bName %></h1>' 
+      title: '<%= link_to @buildings[i].bName, @buildings[i] %>'
     },
     <% end %>
     {
@@ -21,16 +19,16 @@ console.log("Inside initialize");
       title: '<h1>Derp</h1>'
     }];
 
-
-
-    //map options object
+//map options object
     // var mapOptions = {
     //  zoom: 13,
     //  center: new google.maps.LatLng(51.47, -0.2007019),
     //  mapTypeId: google.maps.MapTypeId.ROADMAP,
     //  styles: style
     //  };
-  //map initialize
+
+
+//map initialize
   var map = new google.maps.Map(document.getElementById('map-canvas'), {
     zoom: 8,
     center: new google.maps.LatLng(34.012836,-118.495338),
@@ -38,9 +36,7 @@ console.log("Inside initialize");
 
   });
 
-
-
-    //infowindows initialize
+//infowindows initialize
     var infowindow = new google.maps.InfoWindow();
 
     var marker, i;
