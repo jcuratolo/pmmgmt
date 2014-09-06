@@ -355,11 +355,11 @@ h1 {
 }
 
 .bgadmin {
-  background-color: $primary-color;
+  background: $primary-color;
+  overflow: hidden;
+  height: 100% !important;
   width: 100%;
-  height: 100%;
-  position: fixed;
-  display: block;
+  position: absolute;
 }
 
 .mytext {
@@ -573,6 +573,7 @@ h1 {
 
 .dashhead {
   margin-right: 4em;
+  overflow: hidden;
 }
 
 .yelBgtwo {
@@ -595,6 +596,10 @@ h1 {
 .mapTxt {
   font-family: $font-stack;
   margin-bottom: 2em;
+}
+
+.modal-backdrop {
+    z-index: 1020;
 }
 
 #mapsec {
