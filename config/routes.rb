@@ -1,10 +1,12 @@
 Pmmgmt::Application.routes.draw do
+  get "requestform/index"
   resources  :buildings
   resources  :units
   resources  :building_features
   resources  :unit_features
   devise_for :users
   resources  :listings
+  resources  :requestform
   # resources  :sessions
   # json API
   scope '/api/' do
