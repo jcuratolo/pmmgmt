@@ -7,8 +7,14 @@ function initialize() {
     var places = [{
     lat: 34.012836,
     lng: -118.495338,
-    title: 'property' }];
-
+    title: '<li><%= Building.last.bName %></li>'+
+    '<li><%=Building.last.bAddress1%></li>' 
+    },
+    {
+    lat: 34.112836,
+    lng: -118.495338,
+    title: 'property' 
+    }];
 
 
     //map options object
