@@ -5,8 +5,8 @@ function initialize() {
 
 //data for pop-up info windows
     var places = [{
-    lat: 34.012836,
-    lng: -118.495338,
+    lat: <%= Building.last.latitude %>,
+    lng: <%= Building.last.longitude %>,
     title: '<li><%= Building.last.bName %></li>'+
     '<li><%=Building.last.bAddress1%></li>' 
     },

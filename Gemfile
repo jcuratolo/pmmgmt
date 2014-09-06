@@ -5,6 +5,7 @@ gem 'rails', '4.0.4'
 gem 'devise'
 # Use postgresql as the database for Active Record
 gem 'pg'
+gem 'geocoder'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
