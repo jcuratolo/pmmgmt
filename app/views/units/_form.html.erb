@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= u.label :building_id %> <br />
+   <!--  <%= u.label :building_id %> <br /> -->
     <%= u.collection_select :building_id, Building.all, :id, :bAddress1, autofocus: true, :class => "form-control" %>
   </div>
 
@@ -48,26 +48,13 @@
   <div class="field">
     <%= u.file_field :unitimage %>
   </div>
-  <div class="field">
-    <%= u.file_field :unitimage %>
-  </div>
-  <div class="field">
-    <%= u.file_field :unitimage %>
-  </div>
-  <div class="field">
-    <%= u.file_field :unitimage %>
-  </div>
-  <div class="field">
-    <%= u.file_field :unitimage %>
-  </div>
 
   <div class="field">
-        List?
-    <%= u.check_box :uListing %>
+        List? <%= u.check_box :uListing %>
   </div>
 
   <div class="actions">
-    <%= u.submit "Add Unit", :class => "btn btn-default wideBtn" %>
+    <%= u.submit "Add Unit", :class => "btn btn-default" %>
   </div>
   
 <% end %>
