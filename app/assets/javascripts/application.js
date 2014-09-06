@@ -27,8 +27,6 @@ $(document).ready(function () {
       $(this).parent('li').addClass('active')
     });
 
-
-
     $('#togglenav').hide();
       $('#menubutton').click(function() {
           $('#togglenav').slideToggle("900");
@@ -50,6 +48,6 @@ $(document).ready(function () {
       }
     }
   });
-}); 
+
 
 }); 
