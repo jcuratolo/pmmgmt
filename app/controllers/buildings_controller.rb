@@ -24,8 +24,17 @@ class BuildingsController < ApplicationController
   end
   
   def update
+    @building = Building.find(params[:id]) 
+      if @building.update_attributes(params.require(:user).permit(:bName, :bAddress1, :bAddress2, :bCity, :bState, :bZip, :bPhone, :bUnitCount ))
+      redirect_to building_path 
+      else
+      render 'edit' 
+      end
   end
 
   def destroy
+    @building = Building.find(params[:id])
+      @building.destroy
+      redirect_to buildings_path
   end
 end
