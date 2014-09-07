@@ -3,6 +3,7 @@ class UnitsController < ApplicationController
   def index
     @units = Unit.all
     @unit = Unit.new
+    @buildings = Building.all
   end
 
   def show

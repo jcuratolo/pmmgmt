@@ -27,10 +27,6 @@
           <div class="listingcol" id="firsttab">
             <ul class="listings">
               <%= render 'layouts/dashlisting' %>
-              <%= render 'layouts/dashlisting' %>
-              <%= render 'layouts/dashlisting' %>
-              <%= render 'layouts/dashlisting' %>
-              <%= render 'layouts/dashlisting' %>
               <%#= render 'layouts/unitlist' %>
 
         </div>
@@ -38,10 +34,22 @@
         <div class="tab-pane" id="allunits">
           <br />
             <h1>Listing of all units</h1>
+            <h1>Units#index</h1>
+            <p>Find me in app/views/units/index.html.erb</p>
+
+            <% @units.each do |u| %>
+            <ul><li>Unit number:</li> 
+              <%= u.uNumber %>
+
+              <%= link_to 'Edit', edit_unit_path(u) %>
+              <%= link_to 'Delete', u, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </ul>
+            <% end %>
         </div>
         <div class="tab-pane" id="rentalapps">
           <br />
             <h1>Listing of incoming rental applications.</h1>
+            <%= render 'layouts/unitlist' %>
         </div>
         <div class="tab-pane" id="requests">
           <br />

@@ -33,6 +33,15 @@ $grnbtn-color:  #53d81e;
     float:none;
 }
 
+.bold {
+  font-weight: 700;
+  font-family: helvetica;
+}
+
+.mytitle {
+  font-weight: 100;
+}
+
 .myfont {
   font-family: $font-stack;
   font-weight: 100;
@@ -63,7 +72,6 @@ $grnbtn-color:  #53d81e;
 }
 
 .unitdetails {
-  margin-top: 2em;
   margin-left: 2em;
   text-align: left;
   font-family: $font-stack;

@@ -1,42 +1,58 @@
-<li class="plisting">
-  <div class="row">
-    <div class="col-xs-2">&nbsp;</div>
-    <div class="col-xs-1">
-      <a href="#"><img class="listingimg col-xs-6" src="/assets/test.jpg"></a>
-    </div>
-    <div class="col-xs-2 unitdetails">
-      
-      Address:<br />
-      Price:<br />
-      Bedrooms:<br />
-      Bathrooms:<br />
-    </div>
-    <div class="col-xs-4 unitdetails">
-      Date listed:<br />
-      Description:
-    </div>
-    <div class="col-xs-2 editlinks">
-      <a class="editlink" href="#">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-        </span><br />
-      </a>
-      <a class="editlink" href="#">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-pencil-square-o fa-stack-1x fa-inverse"></i>
-        </span><br />
-      </a>
-      <a class="editlink" href="#">
-        <span class="fa-stack fa-lg">
-          <i class="fa fa-circle fa-stack-2x"></i>
-          <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-        </span>
-      </a>
+<% @buildings.each do |b| %>
+  <% b.units.each do |u| %>
+    <li class="plisting">
+      <div class="row">
+        <div class="col-xs-2">&nbsp;</div>
+        <div class="col-xs-1">
+          <a href="#" class="listingimg"><%= image_tag u.unitimage.url(:listimg) %></a>
+        </div>
+        <div class="col-xs-3 unitdetails">
+            <span class="mytitle">Address:</span><br />  
+              <span class="bold"><%= b.bAddress1 %> #<%= u.uNumber %><br />
+              <span class="bold"><%= b.bCity %></span><br/>
+              <span class="bold"><%= b.bState %>, <%= b.bZip %><br /></span>
+             <span class="mytitle">Price: </span>   
+              <span class="bold">$<%= u.uPrice %></span>
+        </div>
+        <div class="col-xs-4 unitdetails">
+           <span class="mytitle">Bedrooms: </span>
+            <span class="bold"><%= u.uBedroomCount %></span><br />
+           <span class="mytitle">Bathrooms: </span>
+            <span class="bold"><%= u.uBathroomCount %></span><br />
+           <span class="mytitle">Square Footage: </span>
+            <span class="bold"><%= u.uSquareFootage %></span> <br />
 
-    </div>
-    <div class="col-xs-1"></div>
+            <span class="mytitle">Date Listed: </span>
+            <span class="bold"><%= u.created_at %></span> <br />
+          <span class="mytitle">Description: </span>
+            <span class="bold"><%= u.uDescription %></span>
+       
+        </div>
+        <div class="col-xs-1 editlinks">
+          <a class="editlink" href="#">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+            </span><br />
+          </a>
+          <a class="editlink" href="#">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-pencil-square-o fa-stack-1x fa-inverse"></i>
+            </span><br />
+          </a>
+          <a class="editlink" href="#">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
 
-  </div>
-</li>
+        </div>
+        <div class="col-xs-1"></div>
+
+      </div>
+         
+    </li>
+  <% end %>
+<% end %>
