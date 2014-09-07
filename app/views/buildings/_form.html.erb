@@ -1,3 +1,5 @@
+  
+
   <div class="form-group">
 
     <%= form_for @building do |b| %>
@@ -46,7 +48,7 @@
       </div>
 
       <div class="actions">
-        <%= b.submit %>
+        <%= b.submit "Add Building", :class => "btn btn-default"%>
       </div>
     <% end %>
 

@@ -1,0 +1,7 @@
+
+
+<<<<<<< HEAD
+=======
+<%= render 'layouts/parralax' %>
+>>>>>>> master
+<%#= render 'layouts/unitlist' %>
