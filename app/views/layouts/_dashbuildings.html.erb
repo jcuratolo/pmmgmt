@@ -1,0 +1,37 @@
+<% @buildings.each do |b| %>
+  <% b.units.each do |u| %>
+    <li class="plisting">
+      <div class="row">
+        <div class="col-xs-2">&nbsp;</div>
+        <div class="col-xs-1">
+          <a href="#" class="listingimg"><%= image_tag u.unitimage.url(:listimg) %></a>
+        </div>
+        <div class="col-xs-3 unitdetails"> 
+              <span class="bold"><%= b.bName %><br />
+              <span class="bold"><%= b.bAddress1 %>,</span><br/>
+              <span class="bold"> <%= b.bAddress2 %><br /></span>
+              <span class="bold"><%= b.bCity %></span>
+              <span class="bold"> Building Features:<br/><br>
+  <% b.building_features.each do |f| %>
+    <li><%= f.bfName %> </li></span>
+      <% end %>
+        </div>
+        <div class="col-xs-4 unitdetails">
+            <span class="bold"><%= b.bState %> <%= b.bZip %></span><br />
+            <span class="bold"><%= b.bPhone %></span>
+            <span class="bold"><%= u.uBathroomCount %> Bathrooms</span><br />
+            <span class="bold"><%= b.bUnitCount %> units</span> <br />
+            <span class="bold">GPS coordinates for google maps: 
+            </span> <br />
+             <span class="bold">Latitude <%= b.latitude %></span><br />
+            <span class="bold">Longitude <%= b.longitude %></span><br />
+            <span class="bold">created at <%= b.created_at.strftime("%b%e%l:%M %p") %></span><br />
+
+    <span class="bold">last updated <%= b.updated_at.strftime("%b%e%l:%M %p") %> </span>
+            
+        <% end %>
+             <% end %>
+        </div>
+        
+         
+    </li>
