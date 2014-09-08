@@ -4,6 +4,7 @@ class UnitsController < ApplicationController
     @units = Unit.all
     @unit = Unit.new
     @buildings = Building.all
+    @building = Building.new
   end
 
   def show
