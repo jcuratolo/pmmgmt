@@ -33,6 +33,15 @@ $grnbtn-color:  #53d81e;
     float:none;
 }
 
+.slideroverlay {
+  color: black;
+  font-size: 1em;
+  font-weight: 100;
+  background-color: rgba(255, 255, 255, .8);
+  text-align: left;
+  position: absolute;
+}
+
 .bold {
   font-weight: 700;
   font-family: helvetica;
@@ -385,6 +394,10 @@ h1 {
   width: 100%;
   margin: 0 auto;
   display: block;
+}
+
+.editlinks {
+  margin-top: -.5em;
 }
 
 .bgadmin {

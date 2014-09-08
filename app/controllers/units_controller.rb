@@ -8,6 +8,7 @@ class UnitsController < ApplicationController
 
   def show
     @unit = Unit.find(params[:id])
+    @buildings = Building.all
   end
 
   def new
