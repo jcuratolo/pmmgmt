@@ -35,18 +35,20 @@
                 </div>
               </div>
               <div class="tab-pane" id="allunits">
-                <br />
-                <div class="text-center">
-                  <h1>All Units:</h1>
+    
+                <div class="listingcol" id="firsttab">
+                <ul class="listings">
+                  <%= render 'units/unitslisting' %>
+                  <!-- <h1>All Units:</h1>
 
-                  <% @units.each do |u| %>
+                  <#% @units.each do |u| %>
                   <div class="unitslis">Unit number:
-                    <%= u.uNumber %>
+                    <%#= u.uNumber %>
 
-                    <%= link_to 'Edit', edit_unit_path(u) %>
+                    <%#= link_to 'Edit', edit_unit_path(u) %>
                     
                   </div>
-                  <% end %>
+                  <#% end %> -->
                 </div>
               </div>
               <div class="tab-pane" id="rentalapps">
