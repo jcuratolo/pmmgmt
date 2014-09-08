@@ -47,6 +47,23 @@ $grnbtn-color:  #53d81e;
   font-family: helvetica;
 }
 
+.buildins {
+  font-family: $font-stack;
+}
+
+.buildinbtn:hover {
+  background-color: none;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+
+}
+
+.buildinbtn {
+  background-color: $primary-color;
+  color: black;
+}
+
 .boldindex {
   font-weight: 700;
   font-family: helvetica;
