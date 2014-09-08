@@ -33,12 +33,30 @@ $grnbtn-color:  #53d81e;
     float:none;
 }
 
+.slideroverlay {
+  color: black;
+  font-size: 1em;
+  font-weight: 100;
+  background-color: rgba(255, 255, 255, .8);
+  text-align: left;
+  position: absolute;
+}
+
 .bold {
   font-weight: 700;
   font-family: helvetica;
 }
 
+.boldindex {
+  font-weight: 700;
+  font-family: helvetica;
+}
+
 .mytitle {
+  font-weight: 100;
+}
+
+.myindextitle {
   font-weight: 100;
 }
 
@@ -64,6 +82,12 @@ $grnbtn-color:  #53d81e;
   width: auto;
   margin-top: 2em;
   margin-left: -12.8em;
+}
+
+.mylistingimg {
+  height: 100px;
+  width: auto;
+  margin-top: 2em;
 }
 
 .dashform {
@@ -114,6 +138,10 @@ $grnbtn-color:  #53d81e;
 .listcol {
   position: absolute;
   margin-top: 10em;
+}
+
+.indexlistcol {
+  position: absolute;
 }
 
 .editlink:hover {
@@ -328,6 +356,16 @@ $grnbtn-color:  #53d81e;
   overflow-x: hidden;
 }
 
+.indexlistscroll {
+  width: 100%;
+/*  margin-left: 10%;*/
+  height: 400px;
+  position: absolute;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: -1em;
+}
+
 .margin {
   margin-top: 4em;
   display: block;
@@ -356,6 +394,10 @@ h1 {
   width: 100%;
   margin: 0 auto;
   display: block;
+}
+
+.editlinks {
+  margin-top: -.5em;
 }
 
 .bgadmin {
@@ -597,12 +639,21 @@ h1 {
   z-index: 1;
 }
 
+.myplisting {
+  list-style: none;
+  font-size: .5em;
+}
+
 .logoTxt > li > a {
   color: black !important;
 }
 
 .logoLink a:hover {
   color: #cfcfcf;
+}
+
+.unitslis li {
+  list-style: none;
 }
 
 .mapTxt {
@@ -617,8 +668,8 @@ h1 {
 #map-canvas {
   padding:10;
   height:400px;
-  width:100%;
-  margin: 0 auto;
+  width:90%;
+  float: right;
   background-color: rgba(255, 255, 255, 0.4);
   
 }

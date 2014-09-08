@@ -30,6 +30,7 @@
         </div>
         <div class="col-xs-1 editlinks">
           <a class="editlink" href="#">
+            <%= link_to 'Show', unit_path(u) %>
             <span class="fa-stack fa-lg">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
@@ -43,7 +44,9 @@
               <i class="fa fa-pencil-square-o fa-stack-1x fa-inverse"></i>
             </span><br />
           </a>
+                 
           <a class="editlink" href="#">
+            <%= link_to 'Delete', u, method: :delete, data: { confirm: 'Are you sure?' } %>   
             <span class="fa-stack fa-lg">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>

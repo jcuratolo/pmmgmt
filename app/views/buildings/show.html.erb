@@ -1,2 +1,12 @@
 <h1>Buildings#show</h1>
-<p>Find me in app/views/buildings/show.html.erb</p>
+<%= @building.bName %>
+<%= @building.full_street_address %>
+<hr>
+<ul>
+<% @units.each do |unit| %>
+  <li><%= unit.uType %></li>
+  <li><%= unit.uBedroomCount %> Bedrooms</li>
+  <li><%= unit.uDescription %> </li>
+  <hr>
+  <% end %>
+</ul>

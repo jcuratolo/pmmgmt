@@ -8,6 +8,7 @@ class UnitsController < ApplicationController
 
   def show
     @unit = Unit.find(params[:id])
+    @buildings = Building.all
   end
 
   def new
@@ -35,7 +36,7 @@ class UnitsController < ApplicationController
   def update
     @unit = Unit.find(params[:id]) 
       if @unit.update_attributes(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :uPrice))
-      redirect_to unit_path 
+      redirect_to units_path 
       else
       render 'edit' 
       end
