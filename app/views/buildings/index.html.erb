@@ -8,10 +8,8 @@
 <br />
 <% @buildings.each do |b| %> 
 <%= link_to b.bName, b %><br/>   
-<%= b.bAddress1 %>,
-<%= b.bAddress2 %><br /> 
-<%= b.bCity %><br />
-<%= b.bState %> <%= b.bZip %><br />
+<%= b.full_street_address %><br /> 
+<%= b.bZip %><br />
 <%= b.bPhone %><br />
 <%= b.bUnitCount %> units <br /><br />
 GPS coordinates for google maps: <br />
