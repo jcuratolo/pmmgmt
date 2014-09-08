@@ -8,8 +8,14 @@
 <% @buildings.each do |b| %> 
 <div class="row">
   <div class="col-md-6">
+    <div class="row">
+      <div class="col-md-6">
     <%= button_to 'edit ', edit_building_path(b), :class => "btn btn-default" %>
-    <br/><br/>
+        </div>
+        <div class="col-md-6">
+    <%= button_to 'delete', b, method: :delete, :class => "btn btn-default", data: { confirm: '!!!!! Are you sure ?????' } %>
+        </div><br/><br/>
+    </div>
 
     <%= b.bName %><br/>   
     <%= b.bAddress1 %>,
@@ -23,11 +29,11 @@
     <li>Latitude <%= b.latitude %></li></ul><br />
     created at <%= b.created_at.strftime("%b%e%l:%M %p") %> //
     last updated <%= b.updated_at.strftime("%b%e%l:%M %p") %> 
-  </div>
-  <%= button_to 'delete', b, method: :delete, :class => "btn btn-default", data: { confirm: '!!!!! Are you sure ?????' } %>
+
     Building Features:<br/><br>
   <% b.building_features.each do |f| %>
     <li><%= f.bfName %> </li>
+      </div>
   <% end %>
   <br>
  
