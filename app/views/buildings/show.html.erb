@@ -3,6 +3,12 @@
 <%= @building.full_street_address %>
 <hr>
 <ul>
+  <%if @units.count == 0 %> 
+  Sorry, no vacancies.
+  <%elsif @units.count > 0 %>
+  <%=@units.count %> units available:
+  <% end %>
+  <hr>
 <% @units.each do |unit| %>
   <li><%= link_to unit.uType, unit %></li>
   <li><%= unit.uBedroomCount %> Bedrooms</li>
