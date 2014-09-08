@@ -1,18 +1,50 @@
 <h1>Buildings#show</h1>
 <%= @building.bName %>
-<%= @building.full_street_address %>
+
 <hr>
-<ul>
+<div id="home"></div>
+<%= render 'layouts/altnav' %>
+<h2 class="margintest">&nbsp;<br /><br /></div>
+  <br /><br />
+  <div class="container unitshow">
+    <%= render 'layouts/listingslider' %>
+    <div class="row units"><br /><br />
+      <div class="col-xs-1">
+      </div>
+      <div class="col-xs-10 text-center">
+        <span class="bold"><%= @building.bName %></span><br />
+        <span class="bold"> <%= @building.full_street_address %></span><br />
+        <span class="mytitle">Listed: </span>
+        <span class="bold"><%= @building.created_at.strftime("%b%e%l:%M %p") %></span><br />
+        <span class="mytitle">Updated: </span> 
+        <span class="bold"><%= @building.updated_at.strftime("%b%e%l:%M %p") %></span> <br />
+        <ul>
   <%if @units.count == 0 %> 
   Sorry, no vacancies.
-  <%elsif @units.count > 0 %>
+  <%elsif @units.count == 1 %>
+  1 unit availabe:
+  <%elsif @units.count > 1 %>
   <%=@units.count %> units available:
   <% end %>
   <hr>
-<% @units.each do |unit| %>
-  <li><%= link_to unit.uType, unit %></li>
-  <li><%= unit.uBedroomCount %> Bedrooms</li>
-  <li><%= unit.uDescription %> </li>
+  <% @units.each do |unit| %>
+  <%= link_to unit.uType, unit %><br />
+  <%= unit.uBedroomCount %> Bedrooms
+  <%= unit.uDescription %> 
+  <%= unit.uPrice %>
   <hr>
   <% end %>
 </ul>
+
+        <br /><br /><br />
+        <button class="btn btn-default btn-md btn buildinbtn">Contact Us for Details!</button>
+      </div>
+      <div class="col-xs-1">
+      </div>
+    </div>
+
+
+
+
+
+<%#= link_to image_tag(@buildingimage.image.url(:med)), @buildingimage.image.url %>
