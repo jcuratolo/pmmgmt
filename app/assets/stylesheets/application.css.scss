@@ -181,6 +181,10 @@ $grnbtn-color:  #53d81e;
   font-weight: 300;
 }
 
+.space {
+  margin: .4em;
+}
+
 .newbtn {
   border: none;
   background-color: lightblue;
@@ -188,7 +192,7 @@ $grnbtn-color:  #53d81e;
 
 .addunit {
   font-family: $font-stack;
-  font-weight: 100
+  font-weight: 100;
 }
 
 .logoTxt:hover {
