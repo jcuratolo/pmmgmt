@@ -570,6 +570,11 @@ h1 {
   z-index: 1000;
 }
 
+.featuresb li {
+  list-style: none;
+  font-family: $font-stack;
+}
+
 .logohome:hover {
   font-weight:100;
   font-size: 4em;

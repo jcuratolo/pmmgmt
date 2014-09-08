@@ -32,7 +32,9 @@
   </div>
     Building Features:<br/><br>
   <% b.building_features.each do |f| %>
+  <ul class="featuresb">
     <li><%= link_to(f.bfName, building_feature_path(f),:method=> :delete)%> </li>
+  </ul>
   <% end %>
   <br>
  
