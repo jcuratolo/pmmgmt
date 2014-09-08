@@ -8,7 +8,7 @@ Pmmgmt::Application.routes.draw do
   resources  :listings
   
   resources  :requestform
-  # resources  :sessions
+  resources  :sessions
   # json API
   scope '/api' do
     #resources :listings #defaults: { format: :json }
