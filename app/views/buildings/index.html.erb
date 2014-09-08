@@ -12,8 +12,8 @@
 GPS coordinates for google maps: <br />
 <ul><li>Longitude <%= b.longitude %></li>
 <li>Latitude <%= b.latitude %></li></ul><br />
-created at = <%= b.created_at %><br />
-last updated = <%= b.updated_at %><br /><br />
+created at <%= b.created_at.strftime("%b%e%l:%M %p") %> //
+last updated <%= b.updated_at.strftime("%b%e%l:%M %p") %><br /><br />
 <%= link_to 'Edit / ', edit_building_path(b) %>
 <%= link_to 'Delete', b, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% b.building_features.each do |f| %>
