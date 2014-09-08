@@ -17,6 +17,9 @@ class BuildingFeaturesController < ApplicationController
       end
   end
   def destroy
+    @building_feature = BuildingFeature.find(params[:id])
+      @building_feature.destroy
+      redirect_to buildings_path
   end
 
   
