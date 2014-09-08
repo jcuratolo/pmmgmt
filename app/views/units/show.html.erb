@@ -8,30 +8,38 @@
 <h2 class="margintest">&nbsp;<br /><br /></div>
 
   <br /><br />
-  <div class="container">
+  <div class="container unitshow">
 
     <%= render 'layouts/listingslider' %>
 
-    <%= number_to_currency @unit.uPrice %>
-    <%= @unit.uBedroomCount %> Bedroom <%= @unit.uType %>
-    <%= @unit.building.bCity %>
+    <div class="row units"><br /><br />
+      <div class="col-xs-1">
+      </div>
+      <div class="col-xs-10 text-center">
+        <%= number_to_currency @unit.uPrice %>
+        <%= @unit.uBedroomCount %> Bedroom <%= @unit.uType %>
+        <%= @unit.building.bCity %>
 
-    <div class="col-xs-4 unitdetails">
-      <span class="mytitle">Price: </span>   
-      <span class="bold">$<%= @unit.uPrice %></span>
-           <span class="mytitle">Bedrooms: </span>
-            <span class="bold"><%= @unit.uBedroomCount %></span><br />
-           <span class="mytitle">Bathrooms: </span>
-            <span class="bold"><%= @unit.uBathroomCount %></span><br />
-           <span class="mytitle">Square Footage: </span>
-            <span class="bold"><%= @unit.uSquareFootage %></span> <br />
-
-            <span class="mytitle">Date Listed: </span>
-            <span class="bold"><%= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
+        <span class="mytitle">Monthly Rent: </span> 
+        <span class="bold">$<%= @unit.uPrice %></span><br />
+        <span class="mytitle">Bedrooms: </span>
+        <span class="bold"><%= @unit.uBedroomCount %></span><br />
+        <span class="mytitle">Bathrooms: </span>
+        <span class="bold"><%= @unit.uBathroomCount %></span><br />
+        <span class="mytitle">Square Footage: </span>
+        <span class="bold"><%= @unit.uSquareFootage %></span> <br />
+          <span class="mytitle">Date Listed: </span>
+          <span class="bold"><%= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
           <span class="mytitle">Description: </span>
-            <span class="bold"><%= @unit.uDescription %></span>
-       
+          <span class="bold"><%= @unit.uDescription %></span>
+<br /><br /><br />
+              <button class="btn btn-default btn-md btn buildinbtn">Contact Us for Details!</button>
         </div>
+          <div class="col-xs-1">
+      </div>
+      </div>
+
+
 
 
 
