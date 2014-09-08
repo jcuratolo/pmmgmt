@@ -7,7 +7,7 @@
 <hr>
 <br />
 <% @buildings.each do |b| %> 
-<%= b.bName %><br/>   
+<%= link_to b.bName, b %><br/>   
 <%= b.bAddress1 %>,
 <%= b.bAddress2 %><br /> 
 <%= b.bCity %><br />
