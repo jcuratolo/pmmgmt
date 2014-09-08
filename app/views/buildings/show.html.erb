@@ -18,7 +18,7 @@
         <span class="bold"><%= @building.created_at.strftime("%b%e%l:%M %p") %></span><br />
         <span class="mytitle">Updated: </span> 
         <span class="bold"><%= @building.updated_at.strftime("%b%e%l:%M %p") %></span> <br />
-        <ul>
+      <br />
   <%if @units.count == 0 %> 
   Sorry, no vacancies.
   <%elsif @units.count == 1 %>
@@ -34,7 +34,7 @@
   <%= number_to_currency unit.uPrice %>
   <hr>
   <% end %>
-</ul>
+
 
         <br /><br /><br />
         <button class="btn btn-default btn-md btn buildinbtn">Contact Us for Details!</button>

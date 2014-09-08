@@ -26,7 +26,7 @@
           <li><%= button_to "Log out", destroy_user_session_path, method: :delete, :class => "btn btn-default btn-md logOutBtn" %></li>
         <% else %>
           <li>
-            <%= button_to "Admin Login", user_session_path, method: :get, :class => "btn btn-default btn-md logOutBtn" %>
+            <%= button_to "Admin Login", units_path, method: :get, :class => "btn btn-default btn-md logOutBtn" %>
           </li>
         <% end %>
       </ul>
