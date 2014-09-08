@@ -40,12 +40,12 @@
                   <h1>All Units:</h1>
 
                   <% @units.each do |u| %>
-                  <ul class="unitslis"><li>Unit number:</li> 
+                  <div class="unitslis">Unit number:
                     <%= u.uNumber %>
 
                     <%= link_to 'Edit', edit_unit_path(u) %>
                     
-                  </ul>
+                  </div>
                   <% end %>
                 </div>
               </div>
@@ -53,9 +53,16 @@
                  <div class="listingcol" id="firsttab">
                   <ul class="listings">
                 <%= render 'layouts/dashbuildings' %>
+                  </ul>
+                </div>
               </div>
+              
               <div class="tab-pane" id="requests">
+                <div class="listingcol" id="nextab">
+                  <ul class="listings">
+                    Tenant Requests
                 <br />
+              </ul>
               </div>
             </div>
           </div>
