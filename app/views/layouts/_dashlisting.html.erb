@@ -30,13 +30,13 @@
         </div>
         <div class="col-xs-1 editlinks">
 
-             <%= button_to "", unit_path(u), :class => "btn btn-default btn-md opac" %>
+             <%= button_to "", unit_path(u), :class => "btn btn-default btn-md opac", method: :get %>
             <span class="fa-stack fa-lg showbt">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
             </span><br />
 
-           <%= button_to "", edit_unit_path(u), :class => "btn btn-default btn-md opac", method: :delete %>
+           <%= button_to "", edit_unit_path(u), :class => "btn btn-default btn-md opac", method: :get %>
             <span class="fa-stack fa-lg destroybtn">
               <i class="fa fa-circle fa-stack-2x">
               </i>
