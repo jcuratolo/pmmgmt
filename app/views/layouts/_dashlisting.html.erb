@@ -23,7 +23,7 @@
             <span class="bold"><%= u.uSquareFootage %></span> <br />
 
             <span class="mytitle">Date Listed: </span>
-            <span class="bold"><%= u.created_at %></span> <br />
+            <span class="bold"><%= u.created_at.strftime("%b%e%l:%M %p") %></span> <br />
           <span class="mytitle">Description: </span>
             <span class="bold"><%= u.uDescription %></span>
        
@@ -35,9 +35,11 @@
               <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
             </span><br />
           </a>
-          <a class="editlink" href="#">
+          <a class="" href="#">
+                 <%= link_to 'Edit', edit_unit_path(u) %>
             <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-circle fa-stack-2x">
+              </i>
               <i class="fa fa-pencil-square-o fa-stack-1x fa-inverse"></i>
             </span><br />
           </a>

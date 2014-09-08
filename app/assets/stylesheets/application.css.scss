@@ -134,10 +134,6 @@ $grnbtn-color:  #53d81e;
   background-color: none;
 }
 
-.editlinks {
-  margin-top: 1.5em;
-}
-
 .newBg {
   width: 100%;
   height: 100%;
@@ -557,6 +553,14 @@ h1 {
 }
 
 .loginForm {
+  font-family: $font-stack;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 2em;
+
+}
+
+.loginFormtwo {
   font-family: $font-stack;
   width: 300px;
   margin: 0 auto;
