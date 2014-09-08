@@ -1,3 +1,5 @@
+<div class="form-group">
+
 <%= form_for @building_feature do |bf| %>
   <% if @building_feature.errors.any? %>
     <div id="error_explanation">
@@ -17,12 +19,11 @@
   </div>
 
   <div class="field">
-    Feature <br />
-    <%= bf.text_field :bfName %>
+    <%= bf.text_field :bfName, placeholder: "Feature", autofocus: true, :class => "form-control" %>
   </div>
   
   <div class="actions">
-    <%= bf.submit %>
+    <%= bf.submit "Add Feature", :class => "btn btn-default" %>
   </div>
 <% end %>
 
