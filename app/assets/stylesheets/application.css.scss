@@ -100,6 +100,19 @@ $grnbtn-color:  #53d81e;
   z-index: 10000000;
 }
 
+.tabfont {
+  font-family: $font-stack;
+  font-weight: 100;
+  font-size: 1.5em;
+}
+
+.modalhead {
+  font-family: $font-stack;
+  font-weight: 100;
+  text-align: cetner;
+  font-size: 3em;
+}
+
 .myfont {
   font-family: $font-stack;
   font-weight: 100;

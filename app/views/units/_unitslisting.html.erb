@@ -1,5 +1,5 @@
 <% @buildings.each do |b| %>
-  <% b.units.each do |u| %>
+  <% b.units.where(uListing: true).each do |u| %>
     <li class="plisting">
       <div class="row">
         <div class="col-xs-2">&nbsp;</div>
@@ -29,29 +29,25 @@
        
         </div>
         <div class="col-xs-1 editlinks">
-          <a class="editlink" href="#">
-            <%= link_to 'Show', unit_path(u) %>
-            <span class="fa-stack fa-lg">
+
+             <%= button_to "", unit_path(u), :class => "btn btn-default btn-md opac", method: :get %>
+            <span class="fa-stack fa-lg showbt">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
             </span><br />
-          </a>
-          <a class="" href="#">
-                 <%= link_to 'Edit', edit_unit_path(u) %>
-            <span class="fa-stack fa-lg">
+
+           <%= button_to "", edit_unit_path(u), :class => "btn btn-default btn-md opac", method: :get %>
+            <span class="fa-stack fa-lg destroybtn">
               <i class="fa fa-circle fa-stack-2x">
               </i>
               <i class="fa fa-pencil-square-o fa-stack-1x fa-inverse"></i>
             </span><br />
-          </a>
                  
-          <a class="editlink" href="#">
-            <%= link_to 'Delete', u, method: :delete, data: { confirm: 'Are you sure?' } %>   
-            <span class="fa-stack fa-lg">
+            <%= button_to "", unit_path(u), :class => "btn btn-default btn-md opac", method: :delete %>
+            <span class="fa-stack fa-lg destroybtn">
               <i class="fa fa-circle fa-stack-2x"></i>
               <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-            </span>
-          </a>
+            </span><br />
 
         </div>
         <div class="col-xs-1"></div>
