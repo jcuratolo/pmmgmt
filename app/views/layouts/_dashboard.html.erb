@@ -40,7 +40,7 @@
             <% @units.each do |u| %>
             <ul><li>Unit number:</li> 
               <%= u.uNumber %>
-
+              <%= link_to 'Show', unit_path(u) %>
               <%= link_to 'Edit', edit_unit_path(u) %>
               <%= link_to 'Delete', u, method: :delete, data: { confirm: 'Are you sure?' } %>
             </ul>

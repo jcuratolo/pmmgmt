@@ -17,6 +17,7 @@ Pmmgmt::Application.routes.draw do
   end
 
   root 'static#index'
+  
 
   
 
