@@ -1,50 +1,50 @@
 <%#= render 'layouts/dashboard' %>
 <div class="container buildins">
-<br/>
-<br/>
-<div class="text-center">
-<button class="btn btn-default btn-md btn buildinbtn"><%= link_to 'create a new building', new_building_path, :class => "buildingbtn" %></button>
- <button class="btn btn-default btn-md buildinbtn"><%= link_to 'create new feature for a building', new_building_feature_path %></button>
-</div>
-<br/>
-<hr>
-<br />
-
-
-<% @buildings.each do |b| %> 
-<div class="row ">
-  <div class="col-md-6">
-    <button class="btn btn-default btn-md btn buildinbtn"><%= link_to 'edit ', edit_building_path(b) %></button>
-    <button class="btn btn-default btn-md btn buildinbtn"><%= link_to 'delete', b, method: :delete, data: { confirm: '!!!!! Are you sure ?????' } %></button><br/><br/>
-
-    <%= b.bName %><br/>   
-    <%= b.bAddress1 %>,
-    <%= b.bAddress2 %><br /> 
-    <%= b.bCity %><br />
-    <%= b.bState %> <%= b.bZip %><br />
-    <%= b.bPhone %><br />
-    <%= b.bUnitCount %> units <br /><br />
-    GPS coordinates for google maps: <br />
-    <ul class="latlong"><li>Longitude <%= b.longitude %></li>
-    <li>Latitude <%= b.latitude %></li></ul><br />
-    created at <%= b.created_at.strftime("%b%e%l:%M %p") %> //
-    last updated <%= b.updated_at.strftime("%b%e%l:%M %p") %> 
+  <br/>
+  <br/>
+  <div class="text-center">
+    <button class="btn btn-default btn-md btn buildinbtn"><%= link_to 'create a new building', new_building_path, :class => "buildingbtn" %></button>
+    <button class="btn btn-default btn-md buildinbtn"><%= link_to 'create new feature for a building', new_building_feature_path %></button>
   </div>
-    Building Features:<br/><br>
-  <% b.building_features.each do |f| %>
-  <ul class="featuresb">
-    <li><%= link_to(f.bfName, building_feature_path(f),:method=> :delete)%> </li>
-  </ul>
-  <% end %>
-  <br>
- 
+  <br/>
+  <hr>
+  <br />
 
-</div>
-<br/>
-<hr>
-<% end %>
 
- 
+  <% @buildings.each do |b| %> 
+  <div class="row ">
+    <div class="col-md-6">
+
+      <%= b.bName %><br/>   
+      <%= b.bAddress1 %>,
+      <%= b.bAddress2 %><br /> 
+      <%= b.bCity %><br />
+      <%= b.bState %> <%= b.bZip %><br />
+      <%= b.bPhone %><br />
+      <%= b.bUnitCount %> units <br /><br />
+      GPS coordinates for google maps: <br />
+      <ul class="latlong"><li>Longitude <%= b.longitude %></li>
+        <li>Latitude <%= b.latitude %></li></ul><br />
+        created at <%= b.created_at.strftime("%b%e%l:%M %p") %> //
+        last updated <%= b.updated_at.strftime("%b%e%l:%M %p") %><br/> 
+      <button class="btn btn-default btn-md btn buildinbtn"><%= link_to 'edit ', edit_building_path(b) %></button>
+      <button class="btn btn-default btn-md btn buildinbtn"><%= link_to 'delete', b, method: :delete, data: { confirm: '!!!!! Are you sure ?????' } %></button>
+      </div>
+      Building Features:<br/><br>
+      <% b.building_features.each do |f| %>
+      <ul class="featuresb">
+        <li><%= link_to(f.bfName, building_feature_path(f),:method=> :delete)%> </li>
+      </ul>
+      <% end %>
+      <br>
+
+
+    </div>
+    <br/>
+    <hr>
+    <% end %>
+
+
 
 
 
