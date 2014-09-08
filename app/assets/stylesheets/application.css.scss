@@ -535,12 +535,28 @@ h1 {
   z-index: 1000;
 }
 
+.allbuildbtn {
+  background-color: $primary-color;
+  color: black;
+  font-family: $font-stack;
+  font-weight: 400;
+  width: 150px;
+  border: none;
+  font-size: 1.5em;
+  margin-right: .4em;
+}
+
+.allbuildbtn:hover {
+  background-color: black;
+  color: white;
+}
+
 .footercontact {
   font-family: $font-stack;
-  color: white;
+  color: black;
   font-size: .6em;
   text-align: left;
-  background-color: rgba(0, 0, 0, .5);
+  background-color: $primary-color;
   padding: 2em;
   margin-left: 4em;
   margin-top: -1em;
@@ -564,6 +580,20 @@ h1 {
 .logofoot {
   font-weight:100;
   font-size: 4em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+}
+
+.fb {
+  padding-top: 2em;
+}
+
+.logofoottwo {
+  font-weight:100;
+  font-size: 1em;
   opacity: .8;
   width: 185px;
   -webkit-transition: all 0.7s ease;
@@ -656,10 +686,30 @@ h1 {
   width: 50%;
 }
 
+.logolink {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.logolink:hover {
+  text-decoration: none;
+  background-color: none;
+  border: none;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
 .coltwo {
   width: 50%;
 }
 
+.yelBgtwo {
+  width: 100%;
+  height: 2000px;
+  background-color: $admin-color;
+  top: 0;
+  bottom: 0;
+}
 
 .whitecolbg {
   background-color: white;
@@ -673,8 +723,8 @@ h1 {
   float: right;
 }
 
-#margintest {
-  margin: .3em;
+.margintest {
+  margin-bottom: .8em;
 }
 
 .myDownArrow {

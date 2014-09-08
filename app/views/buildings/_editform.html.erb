@@ -1,0 +1,54 @@
+  <div class="form-group">
+
+    <%= form_for @building do |b| %>
+      <% if @building.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@building.errors.count, "error") %> prohibited this building from being saved:</h2>
+
+          <ul>
+          <% @building.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= b.text_field :bName, autofocus: true, :placeholder => "Property Name", :class => "form-control" %>
+      </div>
+      
+      <div class="field">
+        <%= b.text_field :bAddress1, autofocus: true, :placeholder => "Address", :class => "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= b.text_field :bAddress2, autofocus: true, :placeholder => "Line 2", :class => "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= b.text_field :bCity, autofocus: true, :placeholder => "City", :class => "form-control" %>
+      </div>
+      
+      <div class="field">
+        <%= b.text_field :bState, placeholder: "State", autofocus: true, :class => "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= b.text_field :bZip, placeholder: "Zip", autofocus: true, :class => "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= b.text_field :bPhone, placeholder: "Phone Number", autofocus: true, :class => "form-control" %>
+      </div>
+
+       <div class="field">
+        <%= b.text_field :bUnitCount, placeholder: "Number of Units", autofocus: true, :class => "form-control" %>
+      </div>
+
+      <div class="actions">
+        <%= b.submit "Save", :class => "btn btn-default"%>
+      </div>
+    <% end %>
+
+  </div>
+
