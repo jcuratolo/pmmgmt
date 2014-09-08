@@ -1,8 +1,13 @@
 <%#= render 'layouts/dashboard' %>
 <div class="container">
-
+<br/>
+<br/>
+<button><%= link_to 'create a new building', new_building_path %></button>
+<br/>
+<hr>
 <br />
-<% @buildings.each do |b| %>    
+<% @buildings.each do |b| %> 
+<%= b.bName %><br/>   
 <%= b.bAddress1 %>,
 <%= b.bAddress2 %><br /> 
 <%= b.bCity %><br />
