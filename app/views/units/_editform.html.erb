@@ -1,0 +1,61 @@
+<%= form_for @unit, html: { multipart: true } do |u| %>
+  <% if @unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+      <% @unit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">Address:
+   <!--  <%= u.label :building_id %> <br /> -->
+    <%= u.collection_select :building_id, Building.all, :id, :bAddress1, autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="field">Unit #:
+    <%= u.text_field :uNumber, :placeholder => "Unit #", autofocus: true, :class => "form-control" %>
+  </div>
+  
+  <div class="field">Type ex: condo, duplex, etc:
+    <%= u.text_field :uType, placeholder: "Type ex: condo, duplex, etc", autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="field">Number of Bedrooms:
+    <%= u.number_field :uBedroomCount, :placeholder => "Number of Bedrooms", autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="field">Number of Bathrooms:
+    <%= u.number_field :uBathroomCount, :placeholder => "Number of Bathrooms", autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="field">Square Footage:
+    <%= u.number_field :uSquareFootage, :placeholder => "Square Footage", autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="field">Description of Unit:
+    <%= u.text_area :uDescription, :placeholder => "Description", autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="field">Monthly Rent:
+    <%= u.number_field :uPrice, placeholder: "Monthly Rent", autofocus: true, :class => "form-control" %>
+  </div>
+
+  <div class="field">Images:
+    <%= u.file_field :unitimage %>
+  </div>
+
+  <div class="field">
+        List? <%= u.check_box :uListing %>
+  </div>
+
+  <div class="actions">
+    <%= u.submit "Update Unit", :class => "btn btn-default" %>
+  </div>
+  
+<% end %>
+
+

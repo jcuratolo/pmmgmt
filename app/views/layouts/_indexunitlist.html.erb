@@ -1,0 +1,56 @@
+<div class="indexlistscroll">
+
+<% @buildings.each do |b| %>
+<% b.units.each do |u| %>
+<li class="myplisting">
+  <div class="row">
+    <div class="col-md-5">
+      <a href="#" class="mylistingimg"><%= image_tag u.unitimage.url(:listimg) %></a>
+    </div>
+    <div class="col-md-5 text-center"><br />
+      <span class="boldindex"><%= b.bAddress1 %> #<%= u.uNumber %><br />
+        <span class="boldindex"><%= b.bCity %></span><br/>
+        <span class="boldindex"><%= b.bState %>, <%= b.bZip %><br /></span>
+      </div>
+      <div class="col-md-2">
+        <a class="editlink" href="#">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
+          </span><br />
+        </a>
+
+
+
+
+
+      </div>
+
+    </div><br /><br />
+    <div class="row">
+      <div class="col-md-5">
+        <span class="myindextitle">Bedrooms: </span>
+        <span class="boldindex"><%= u.uBedroomCount %></span><br />
+        <span class="myindextitle">Bathrooms: </span>
+        <span class="boldindex"><%= u.uBathroomCount %></span><br />
+        <span class="myindextitle">Square Footage: </span>
+        <span class="boldindex"><%= u.uSquareFootage %></span> <br />
+        <span class="myindextitle">Price: </span>   
+        <span class="boldindex">$<%= u.uPrice %></span><br />
+        <span class="myindextitle">Date Listed: </span>
+        <span class="boldindex"><%= u.created_at.strftime("%b%e%l:%M %p") %></span>
+      </div>
+      <div class="col-md-6">
+        <span class="myindextitle">Description: </span>
+        <span class="boldindex"><%= u.uDescription %></span>
+      </div>
+      <div class="col-md-1"></div>
+
+    </div>
+    <br /><hr /><br />
+
+  </li>
+  <% end %>
+  <% end %>
+
+</div>
