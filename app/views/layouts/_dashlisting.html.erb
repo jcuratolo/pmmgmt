@@ -1,5 +1,5 @@
 <% @buildings.each do |b| %>
-  <% b.units.each do |u| %>
+  <% b.units.where(uListing: true).each do |u| %>
     <li class="plisting">
       <div class="row">
         <div class="col-xs-2">&nbsp;</div>
