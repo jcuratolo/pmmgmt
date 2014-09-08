@@ -10,15 +10,16 @@
               <span class="bold"><%= b.bName %><br />
               <span class="bold"><%= b.bAddress1 %>,</span><br/>
               <span class="bold"> <%= b.bAddress2 %><br /></span>
-              <span class="bold"><%= b.bCity %></span> 
+              <span class="bold"><%= b.bCity %></span> <br />
+              <span class="bold"><%= b.bState %> <%= b.bZip %></span><br /><br />
         <span class="bold"> Building Features:<br/>
   <% b.building_features.each do |f| %>
     <span class="bold"><%= f.bfName %> </span><br /></span>
       <% end %>
     </div>
         <div class="col-xs-4 unitdetails">
-            <span class="bold"><%= b.bState %> <%= b.bZip %></span><br />
-            <span class="bold"><%= b.bPhone %></span>
+            
+            <span class="bold"><%= b.bPhone %></span><br />
             <span class="bold"><%= b.bUnitCount %> units</span> <br />
             <span class="bold">GPS coordinates for google maps: 
             </span> <br />
