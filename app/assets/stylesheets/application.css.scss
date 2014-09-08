@@ -60,10 +60,45 @@ $grnbtn-color:  #53d81e;
   font-weight: 100;
 }
 
+.btn-rederer {
+  background-color: #FF3333;
+  border: none;
+  color: white;
+  width: 40px;
+  margin-top: 1em;
+
+ }
+
+.widerrr {
+  width: 30px;
+  margin-top: 1.7em;
+  margin-right: -.4em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.opac {
+  opacity: 0;
+  position: absolute;
+  z-index: 10000000;
+}
+
 .myfont {
   font-family: $font-stack;
   font-weight: 100;
   text-align: left;
+}
+
+.testtt {
+  padding-top: 1.6em;
+  position: absolute;
+  color: white;
+  font-size: .7em;
+}
+
+.showbt {
+  position: absolute;
+  margin-top: -1em;
 }
 
 .myfonttwo {
@@ -405,7 +440,7 @@ h1 {
 }
 
 .editlinks {
-  margin-top: -.5em;
+  margin-top: .5em;
 }
 
 .bgadmin {
@@ -414,6 +449,10 @@ h1 {
   height: 100% !important;
   width: 100%;
   position: absolute;
+}
+
+.destroybtn {
+  margin-top: .1em;
 }
 
 .mytext {
