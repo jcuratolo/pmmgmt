@@ -1,0 +1,65 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+<script>
+function initialize() {
+console.log("Inside initialize");
+
+// Here is where we insert the buildings into an array of js objects.
+// The mess in the title attribute is so we can show the building name as a link along with the address underneath 
+    var places = [
+    <% for i in 0..@buildings.length-1 do %>
+    {
+      lat: <%= @buildings[i].latitude %>,
+      lng: <%= @buildings[i].longitude %>,
+      title: '<h1><%= link_to @buildings[i].bName, @buildings[i] %></h1></br><%=@buildings[i].full_street_address%></br>'
+    },
+    <% end %>
+    {
+      lat: 34.012836,
+      lng: -118.495338,
+      title: '<h1>Derp</h1>'
+    }];
+
+//map options object
+    // var mapOptions = {
+    //  zoom: 13,
+    //  center: new google.maps.LatLng(51.47, -0.2007019),
+    //  mapTypeId: google.maps.MapTypeId.ROADMAP,
+    //  styles: style
+    //  };
+
+
+//map initialize
+  var map = new google.maps.Map(document.getElementById('mymap-canvas'), mapOptions = {
+    zoom: 12,
+    center: new google.maps.LatLng(34.05,-118.39536),
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    scrollwheel: false,
+    scaleControll: true
+  });
+<%#= (@buildings.inject do |i,j| i.latitude+j end)/a.length.to_f %>
+//infowindows initialize
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < places.length-1; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(places[i].lat, places[i].lng),
+        map: map,
+        animation: google.maps.Animation.DROP
+      });
+console.log(i);
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(places[i].title);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+
+  </script>
+    <div id="mymap-canvas"></div>

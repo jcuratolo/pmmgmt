@@ -1,0 +1,40 @@
+<div class="container listingcontainer">
+  <br />
+<% @buildings.each do |b| %>
+<% b.units.each do |u| %>
+
+<div class="unitfeat">
+  <div clas="sideimg">
+<!--     <span class="clicktxt">I'm interested!</span> -->
+    <%= image_tag u.unitimage.url(:medium), :class => "sideimg" %>
+  </div>
+
+  <div class="rprice">$ <%= u.uPrice %>0 / month</div>
+   
+  <div class="text-center infotext">
+    <%= u.uBedroomCount %> Bed <%= u.uBathroomCount %> Bath <%= u.uType %> 
+    <%= u.uSquareFootage %> Sq Ft  <br /><br />
+
+    <%= b.bAddress1 %> #<%= u.uNumber %>, 
+    <%= b.bCity %>
+    <%= b.bState %> <%= b.bZip %><br/>
+  </div>
+
+  <div class="desc">
+
+    Description: <%= u.uDescription %>
+
+  </div><br />
+
+    <button class="my-btn">Find out more.</button>
+  <hr />
+
+</div>
+
+<hr>
+
+
+<% end %>
+<% end %>
+
+</div>
