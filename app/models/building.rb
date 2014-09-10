@@ -13,4 +13,16 @@ class Building < ActiveRecord::Base
   def full_street_address
     return "#{bAddress1}, #{bCity}, #{bState}"
   end
+
+  def geo_center
+    @buildings = Buildings.all 
+    @buildings.each do |d|
+      coords.push(d.full_street_address.coordinates)
+      Geocoder::Calculations.geographic_center(coords)
+    end
+  end
+
+  def lng_geo_center
+
+  end
 end

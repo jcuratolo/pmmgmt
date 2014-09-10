@@ -31,13 +31,12 @@ console.log("Inside initialize");
 
 //map initialize
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(34.012836,-118.495338),
+    zoom: 10,
+    center: new google.maps.LatLng(<%=@buildings.pluck(:latitude).sum/@buildings.length%>,<%=@buildings.pluck(:longitude).sum/@buildings.length%>),
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
     scaleControll: true
   });
-<%#= (@buildings.inject do |i,j| i.latitude+j end)/a.length.to_f %>
 //infowindows initialize
     var infowindow = new google.maps.InfoWindow();
 

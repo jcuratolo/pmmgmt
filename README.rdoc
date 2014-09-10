@@ -1,28 +1,13 @@
-== README
+=== README ===
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a property management web app designed for use by small property management companies. The system stores buildings, units, their respective features, as well as user priveledge levels for access control.
 
-Things you may want to cover:
+All tests have not yet been implemented yet and the data model may continue to evolve as development continues.
 
-* Ruby version
+Run tests simply with "rspec" in the console.
 
-* System dependencies
+The map will not display with too few buildings with legitemate addressess stored in the database.
 
-* Configuration
+This project relies heavily on Rails and Javascript.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Monday, Sept. 8, 2014

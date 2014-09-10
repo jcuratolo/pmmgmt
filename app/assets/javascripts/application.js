@@ -26,5 +26,6 @@ $(document).ready(function () {
       $('ul.nav-tabs li.active').removeClass('active')
       $(this).parent('li').addClass('active')
     });
+});
 
 
