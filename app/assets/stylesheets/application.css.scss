@@ -846,13 +846,10 @@ h1 {
 }
 
 .rprice {
-  position: absolute;
-  width: 320px;
+  width: 100%;
   text-align: center;
   margin: 0, auto;
   padding: .5em;
-
-
   background-color: rgba(0, 0, 0, .8);
   color: white;
   font-family: lato;
@@ -863,27 +860,28 @@ h1 {
 .listingcontainer {
   height: auto;
   margin-right: .4em;
-  min-width: 320px;
+  width: 100%;
 }
-
-
 
 .desc {
   max-width: 320px;
 }
 
 .unitfeat {
-  width: 320px;
+  width: 98%;
+  max-width: 320px;
+  margin: 0 auto;
   text-align: center;
   font-family: lato;
+  padding-right: .1em;
 }
 
 .infotext {
-  margin-top: 3.8em;
+  margin-top: 1em;
 }
 
 .sideimg {
-  width: 320px;
+  width: 100%;
   height: 148px;
   margin: 0 auto;
   -webkit-transition: all 0.7s ease;
@@ -929,8 +927,9 @@ h1 {
 .unitslistingsbar {
   height: 100%;
   left: 0;
-  width: 320px;
+  width: 100%;
   min-width: 320px;
+  padding-right: .5em;
   background-color: white;
   z-index: 10000;
 }
