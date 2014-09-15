@@ -6,7 +6,7 @@
 
   <div class="container">
 
-    <h1 class="text-center mainTxtHead">Turning Your Vision Into Realty</h1>
+    <h1 class="text-center mainTxtHead" id="services">Turning Your Vision Into Realty</h1>
 
     <div class="text-center">
 
@@ -44,7 +44,7 @@
 
           <img src="/assets/s3.jpg" alt="featureImage1" />
           <br /><br />
-          <div class="mytextbox" id="services">
+          <div class="mytextbox">
             <p class="mytext">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
@@ -82,7 +82,7 @@
 
         </p>
  
-        <div class="text-center" id="mapsec">
+        <div class="text-center">
           <button class="btn btn-default wideBtn">Learn More</button>
         </div>
 
@@ -93,7 +93,7 @@
   </div>
 
   <div class="text-center"<br /><br />
-  <h2 class="mapTxt">Check out our properties!</h2>
+  <h2 class="mapTxt" id="mapsec">Check out our properties!</h2>
 </div>
 
 <!-- <iframe width="100%" height="400px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed">
@@ -148,7 +148,10 @@
 
       </div>
     </div>
+
   <script type="text/javascript">
+
+  $(".footercontact").hide();
 
   $(document).ready(function () {
 
@@ -158,7 +161,7 @@
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
-            $('html,body').animate({scrollTop: target.offset().top}, 1000);
+            $('html,body').animate({scrollTop: target.offset().top - 160}, 1000);
             return false;
           }
         }
@@ -174,6 +177,15 @@
     $('.carousel').carousel({
       interval: 3000
     });
+
+    $(window).scroll(function(){
+      if($(window).scrollTop()>1200){
+        $(".footercontact").slideDown('slow');
+      }else{
+        $(".footercontact").slideUp('fast');
+      }
+});
+
   });
 
 
