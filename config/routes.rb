@@ -1,14 +1,21 @@
 Pmmgmt::Application.routes.draw do
+  
+  root 'static#index'
+
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+
   get "requestform/index"
   resources  :buildings
   resources  :units
   resources  :building_features
   resources  :unit_features
-
-  resources  :listings
-  
+  resources  :listings  
   resources  :requestform
+  resources  :users
   resources  :sessions
+
   # json API
   scope '/api' do
     #resources :listings #defaults: { format: :json }
@@ -16,7 +23,9 @@ Pmmgmt::Application.routes.draw do
     #resources :listings, only: :api#, defaults: { format: :json }
   end
 
-  root 'static#index'
+
+
+
 
   
 
