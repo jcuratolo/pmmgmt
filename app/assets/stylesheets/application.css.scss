@@ -17,7 +17,9 @@
 /*@import url(http://fonts.googleapis.com/css?family=Dancing+Script:400,700);*/
 
 @import url(http://fonts.googleapis.com/css?family=Dosis:200,400,700);
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Dosis:200,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100,300,400,700);
 
 @import 'bootstrap';
 @import "font-awesome";
@@ -439,7 +441,6 @@ $grnbtn-color:  #53d81e;
 
 .indexlistscroll {
   width: 100%;
-/*  margin-left: 10%;*/
   height: 400px;
   position: absolute;
   overflow-y: scroll;
@@ -844,6 +845,111 @@ h1 {
   list-style: none;
 }
 
+.rprice {
+  width: 100%;
+  text-align: center;
+  margin: 0, auto;
+  padding: .5em;
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  font-family: lato;
+  font-weight: 100;
+  font-size: 1.4em;
+}
+
+.listingcontainer {
+  height: auto;
+  margin-right: .4em;
+  width: 100%;
+}
+
+.desc {
+  max-width: 320px;
+}
+
+.unitfeat {
+  width: 98%;
+  max-width: 320px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: lato;
+  padding-right: .1em;
+}
+
+.infotext {
+  margin-top: 1em;
+}
+
+.sideimg {
+  width: 100%;
+  height: 148px;
+  margin: 0 auto;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 10;
+}
+
+.sideimg:hover {
+  opacity: .5;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 2;
+}
+
+.my-btn {
+  border-radius: 3px;
+  border: none;
+  width: 175px;
+  height: 30px;
+  background-color: $primary-color;
+  color: black;
+  font-family: lato;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.my-btn:hover {
+  background-color: black;
+  color: $primary-color;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.clicktxt {
+  position: absolute;
+  width: 320px;
+  text-align: center;
+  margin: 5em auto;
+  font-size: 2em;
+  z-index: 100;
+}
+
+.unitslistingsbar {
+  height: 100%;
+  left: 0;
+  width: 100%;
+  min-width: 320px;
+  padding-right: .5em;
+  background-color: white;
+  z-index: 10000;
+}
+
+.unitside {
+  float: left;
+  width: 25%;
+  min-width: 320px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+  position: absolute;
+  z-index: 1000000000;
+}
+
+.mapside {
+  width: 75%;
+  float: right;
+}
+
 .mapTxt {
   font-family: $font-stack;
   margin-bottom: 2em;
@@ -860,6 +966,14 @@ h1 {
   float: right;
   background-color: rgba(255, 255, 255, 0.4);
   
+}
+
+#mymap-canvas {
+  min-height: 100%;
+  position: absolute;
+  width:100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 1;
 }
 
 .fadeIn{
