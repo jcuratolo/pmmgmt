@@ -21,15 +21,7 @@
       <ul class="nav navbar-nav nav-justified text-center logoTxt">
         <li><a class="logoLink fadeIn" href="/">< pmgmt ></a></li>
       </ul>
-     <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>  
-          <li><%= button_to "Log out", destroy_user_session_path, method: :delete, :class => "btn btn-default btn-md logOutBtn" %></li>
-        <% else %>
-          <li>
-            <%= button_to "Admin Login", units_path, method: :get, :class => "btn btn-default btn-md logOutBtn" %>
-          </li>
-        <% end %>
-      </ul>
+    
 
     <!-- Collect the nav links, forms, and other content for toggling -->
 

@@ -4,7 +4,7 @@ Pmmgmt::Application.routes.draw do
   resources  :units
   resources  :building_features
   resources  :unit_features
-  devise_for :users
+
   resources  :listings
   
   resources  :requestform
