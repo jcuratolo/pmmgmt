@@ -1082,6 +1082,10 @@ h1 {
   }
 }
 
+.carousel-inner > .item > img, .carousel-inner > .item > a > img{
+    margin: 0 auto;
+}
+
 .flipInY {
   -webkit-backface-visibility: visible !important;
   -ms-backface-visibility: visible !important;
