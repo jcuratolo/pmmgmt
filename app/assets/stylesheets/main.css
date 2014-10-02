@@ -443,6 +443,7 @@ h3 a:hover {
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img{
     width: 100%;
+    min-height: 400px;
 }
 
 .st-panel p {
