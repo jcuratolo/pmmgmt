@@ -560,7 +560,6 @@ h1 {
   background-color: $primary-color;
   padding: 2em;
   margin-left: 4em;
-  margin-top: -1em;
   width: 70%;
 }
 
@@ -750,6 +749,12 @@ h1 {
 .aboutimg {
   width: 100%;
   height: auto;
+  max-width: 600px;
+  margin-bottom: 2em;
+}
+
+.aboutext {
+  max-width: 600px;
 }
 
 .mytextbox {
@@ -955,17 +960,18 @@ h1 {
   margin-bottom: 2em;
 }
 
+.servicerow {
+  margin-bottom: 1em;
+}
+
 .modal-backdrop {
     z-index: 1020;
 }
 
 #map-canvas {
-  padding:10;
-  height:400px;
-  width:90%;
-  float: right;
+  height:500px;
+  width:100% !important;
   background-color: rgba(255, 255, 255, 0.4);
-  
 }
 
 #mymap-canvas {
@@ -1080,10 +1086,6 @@ h1 {
     -ms-transform: perspective(400px);
     transform: perspective(400px);
   }
-}
-
-.carousel-inner > .item > img, .carousel-inner > .item > a > img{
-    margin: 0 auto;
 }
 
 .flipInY {
