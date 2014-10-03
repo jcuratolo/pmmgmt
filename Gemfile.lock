@@ -35,6 +35,7 @@ GEM
     aws-sdk-v1 (1.52.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
+    bcrypt-ruby (3.1.2)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     builder (3.1.4)
@@ -194,6 +195,7 @@ PLATFORMS
 DEPENDENCIES
   aws-s3
   aws-sdk
+  bcrypt-ruby (~> 3.1.2)
   bootstrap-sass (~> 3.2.0)
   capybara
   coffee-rails (~> 4.0.0)

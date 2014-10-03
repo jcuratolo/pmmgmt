@@ -17,7 +17,7 @@ class UnitsController < ApplicationController
   end
 
   def create
-    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :uPrice, :bucket))
+    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :unitimage2, :unitimage3, :unitimage4, :uPrice, :bucket))
 
       if @unit.save
         redirect_to units_path
@@ -36,7 +36,7 @@ class UnitsController < ApplicationController
 
   def update
     @unit = Unit.find(params[:id]) 
-      if @unit.update_attributes(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :uPrice, :bucket))
+      if @unit.update_attributes(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :unitimage2, :unitimage3, :unitimage4, :uPrice, :bucket))
       redirect_to units_path 
       else
       render 'edit' 
