@@ -5,7 +5,10 @@
 <li class="myplisting">
   <div class="row">
     <div class="col-md-5">
-      <a href="#" class="mylistingimg"><%= image_tag u.unitimage.url(:listimg) %></a>
+      <a href="#" class="mylistingimg"><%= image_tag u.unitimage.url(:medium) %></a>
+      <a href="#" class="mylistingimg"><%= image_tag u.unitimage2.url(:medium) %></a>
+      <a href="#" class="mylistingimg"><%= image_tag u.unitimage3.url(:medium) %></a>
+      <a href="#" class="mylistingimg"><%= image_tag u.unitimage4.url(:medium) %></a>
     </div>
     <div class="col-md-5 text-center"><br />
       <span class="boldindex"><%= b.bAddress1 %> #<%= u.uNumber %><br />

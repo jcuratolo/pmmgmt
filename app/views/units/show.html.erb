@@ -31,6 +31,7 @@
           <span class="mytitle">Date Listed: </span>
           <span class="bold"><%= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
           <span class="mytitle">Description: </span>
+          <%= image_tag @unit.unitimage.url(:medium) %>
           <span class="bold"><%= @unit.uDescription %></span>
 <br /><br /><br />
               <button class="btn btn-default btn-md btn buildinbtn">Contact Us for Details!</button>

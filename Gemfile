@@ -46,6 +46,8 @@ gem 'therubyracer'
 gem 'skrollr-rails'
 
 gem 'paperclip', '~> 4.2.0'
+gem 'aws-sdk'
+gem 'aws-s3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
