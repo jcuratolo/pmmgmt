@@ -13,15 +13,27 @@
         <span class="icon-bar"></span>
       </button>  
       <ul class="nav navbar-nav navbar-left navLinks">
+        
+          <% if current_user %>
+            Logged in as <%= current_user.email %>.
+              <%= link_to "Log Out", logout_path %>
+          <% else %>
+            <%= link_to "Admin Login", login_path, :class => "btn btn-default btn-md btn-log" %>
+          <% end %>
+
+
         <%#= form_for @user, {url: new_user_path} do |f| %>
-          <li><%#= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log", :method :get %></li>
+         <%#= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log", :method :get %></li>
         <%# end %>
       </ul>
     </div>
       <ul class="nav navbar-nav nav-justified text-center logoTxt">
         <li><a class="logoLink fadeIn" href="/">< pmgmt ></a></li>
       </ul>
-    
+
+
+
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
 
@@ -37,7 +49,7 @@
 
             <li class="navLinks previ loginTxt"><a href="#">Investments</a></li>
 
-            <li class="navLinks previ loginTxt"><a href="#mapsec">Vacancy List</a></li>
+            <li class="navLinks previ loginTxt"><%= link_to "Vacancy List", listings_path %></li>
 
             <li class="navLinks previ loginTxt"><a href="#contact">Contact</a></li>
           <%# end %>
