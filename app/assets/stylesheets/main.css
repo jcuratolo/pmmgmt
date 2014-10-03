@@ -446,6 +446,11 @@ h3 a:hover {
     min-height: 400px;
 }
 
+.carousel {
+  position: relative;
+  margin-top: 1em;
+}
+
 .st-panel p {
   position: absolute;
   text-align: center;

@@ -13,8 +13,17 @@
         <span class="icon-bar"></span>
       </button>  
       <ul class="nav navbar-nav navbar-left navLinks">
+        
+          <% if current_user %>
+            Logged in as <%= current_user.email %>.
+              <%= link_to "Log Out", logout_path %>
+          <% else %>
+            <%= link_to "Admin Login", login_path, :class => "btn btn-default btn-md btn-log" %>
+          <% end %>
+
+
         <%#= form_for @user, {url: new_user_path} do |f| %>
-          <li><%#= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log", :method :get %></li>
+         <%#= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log", :method :get %></li>
         <%# end %>
       </ul>
     </div>

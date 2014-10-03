@@ -26,6 +26,20 @@ $(document).ready(function () {
       $('ul.nav-tabs li.active').removeClass('active')
       $(this).parent('li').addClass('active')
     });
+
+    $('#buildbtn').click(function(){
+		$('.altdashViewU').hide();
+		$('.altdashView').show();
+	});
+
+	$('#unitbtn').click(function(){
+		$('.altdashView').hide();
+		$('.altdashViewU').show();
+	});
+
+
+   	$('.altdashViewU').hide();
+
 });
 
 
