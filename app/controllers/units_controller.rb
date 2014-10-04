@@ -1,5 +1,12 @@
 class UnitsController < ApplicationController
-  
+  before_action :check_for_user
+
+  def check_for_user
+    if !current_user
+      redirect_to root_url
+    end
+  end 
+
   def index
     @units = Unit.all
     @unit = Unit.new
