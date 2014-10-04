@@ -6,7 +6,9 @@ console.log("Inside initialize");
 
 // Here is where we insert the buildings into an array of js objects.
 // The mess in the title attribute is so we can show the building name as a link along with the address underneath 
+    
     var places = [
+
     <% for i in 0..@buildings.length-1 do %>
     {
       lat: <%= @buildings[i].latitude %>,

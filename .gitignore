@@ -16,3 +16,6 @@
 /tmp
 .env
 .env
+
+/config/environments/development.rb
+/config/initializers/aws.rb

@@ -1,5 +1,12 @@
 class UnitsController < ApplicationController
-  
+  before_action :check_for_user
+
+  def check_for_user
+    if !current_user
+      redirect_to root_url
+    end
+  end 
+
   def index
     @units = Unit.all
     @unit = Unit.new
@@ -17,7 +24,7 @@ class UnitsController < ApplicationController
   end
 
   def create
-    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :uPrice))
+    @unit = Unit.new(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :unitimage2, :unitimage3, :unitimage4, :uPrice, :bucket))
 
       if @unit.save
         redirect_to units_path
@@ -36,7 +43,7 @@ class UnitsController < ApplicationController
 
   def update
     @unit = Unit.find(params[:id]) 
-      if @unit.update_attributes(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :uPrice))
+      if @unit.update_attributes(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :unitimage2, :unitimage3, :unitimage4, :uPrice, :bucket))
       redirect_to units_path 
       else
       render 'edit' 
@@ -48,4 +55,10 @@ class UnitsController < ApplicationController
       @unit.destroy
       redirect_to units_path
   end
+
+  # private
+
+  # def unit_params
+  #   params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :uPrice)
+  # end
 end

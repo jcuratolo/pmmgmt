@@ -102,8 +102,6 @@ $grnbtn-color:  #53d81e;
   z-index: 10000000;
 }
 
-
-
 .tabfont {
   font-family: $font-stack;
   font-weight: 100;
@@ -146,10 +144,6 @@ $grnbtn-color:  #53d81e;
   font-weight: 100;
   text-align: center;
   margin-top: -1.5em;
-}
-
-.addunit {
-  float: right;
 }
 
 .listingimg {
@@ -265,11 +259,6 @@ $grnbtn-color:  #53d81e;
   background-color: lightblue;
 }
 
-.addunit {
-  font-family: $font-stack;
-  font-weight: 100;
-}
-
 .logoTxt:hover {
   color: #555;
 }
@@ -284,7 +273,7 @@ $grnbtn-color:  #53d81e;
   width: 100%;
   left: 0;
   background-color: rgba(255, 255, 255, 1);
-  height: 10em;
+  height: 13em;
   z-index: 1000;
   border-radius: none;
   border: none !important;
@@ -329,6 +318,12 @@ $grnbtn-color:  #53d81e;
 .navWidth {
   width: 80%;
   margin: 0 auto;
+}
+
+.dashbtn {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 5em;
 }
 
 .slideDown{
@@ -484,7 +479,6 @@ h1 {
 
 .bgadmin {
   background: $primary-color;
-  overflow: hidden;
   height: 100% !important;
   width: 100%;
   position: absolute;
@@ -552,6 +546,47 @@ h1 {
   color: white;
 }
 
+.contentRow {
+  margin: 1em 0 1em 0;
+  padding-bottom: .8em;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.details {
+  color: blue;
+  text-decoration: underline;
+}
+
+.btn-primary {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.titleRow {
+  margin: 2em 0 1em 0;
+  padding-bottom: .8em;
+  font-weight: bold;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.altdashView {
+  background-color: white;
+  min-height: 200px;
+  max-height: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.altdashViewU {
+  background-color: white;
+  min-height: 200px;
+  max-height: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
 .footercontact {
   font-family: $font-stack;
   color: black;
@@ -560,7 +595,6 @@ h1 {
   background-color: $primary-color;
   padding: 2em;
   margin-left: 4em;
-  margin-top: -1em;
   width: 70%;
 }
 
@@ -586,6 +620,10 @@ h1 {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   z-index: 1000;
+}
+
+.btn-log {
+  border: none;
 }
 
 .fb {
@@ -657,6 +695,19 @@ h1 {
   z-index: 1000;
   margin-left: 1.5em;
   margin-top: .4em;
+}
+
+.downimgt {
+  font-weight:100;
+  font-size: 4em;
+  opacity: .8;
+  width: 185px;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  z-index: 1000;
+  position: fixed;
+  top: 1em;
+  left: 1em;
 }
 
 .addbuilding {
@@ -747,9 +798,23 @@ h1 {
   margin-top: 0em;
 }
 
+.addunit {
+  font-family: $font-stack;
+  font-weight: 100;
+  font-style: 1.5em;
+  width: 150px;
+  float: right;
+}
+
 .aboutimg {
   width: 100%;
   height: auto;
+  max-width: 600px;
+  margin-bottom: 2em;
+}
+
+.aboutext {
+  max-width: 600px;
 }
 
 .mytextbox {
@@ -815,8 +880,8 @@ h1 {
 }
 
 .dashhead {
-  margin-right: 4em;
-  overflow: hidden;
+  width: 100%;
+  margin: 2em auto 0 auto;
 }
 
 .yelBgtwo {
@@ -953,17 +1018,18 @@ h1 {
   margin-bottom: 2em;
 }
 
+.servicerow {
+  margin-bottom: 1em;
+}
+
 .modal-backdrop {
     z-index: 1020;
 }
 
 #map-canvas {
-  padding:10;
-  height:400px;
-  width:90%;
-  float: right;
+  height:500px;
+  width:100% !important;
   background-color: rgba(255, 255, 255, 0.4);
-  
 }
 
 #mymap-canvas {

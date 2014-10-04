@@ -1,0 +1,142 @@
+<% if current_user %>
+
+ 
+<div class="adminhead">
+
+<a href="/"><img class="downimgt" src="/assets/pmlogo1.png" alt="logo"></a>
+
+</div>
+
+<h2 class="myadmintxt text-center">Admin Dashboard</h2>
+
+<div class="text-center">
+<div class="btn-group dashbtn">
+  <button type="button" id="unitbtn" class="btn btn-default btn-primary">Units</button>
+  <button type="button" id="buildbtn" class="btn btn-default btn-primary">Buildings</button>
+</div>
+</div>
+<div class="container">
+<div class="dashhead pull-right">
+  <%= render 'units/modaltest' %>
+</div> 
+</div>
+
+<div class="altdashView">
+<div class="container">
+	<div class="row titleRow">
+
+		<div class="col-xs-3">
+			Building Name
+		</div>
+		<div class="col-xs-4">
+			Address
+		</div>
+		<div class="col-xs-2">
+			Phone
+		</div>
+		<div class="col-xs-1">
+			Units
+		</div>
+		<div class="col-xs-2">
+			View Details
+		</div>
+	</div>
+	<% @buildings.each do |b| %>
+	<div class="row contentRow">
+
+		<div class="col-xs-3">
+			<%= b.bName %>
+		</div>
+		<div class="col-xs-4">
+			<%= b.bAddress1 %>
+		</div>
+		<div class="col-xs-2">
+			<%= b.bPhone %>
+		</div>
+		<div class="col-xs-1">
+			<%= b.bUnitCount %>
+		</div>
+		<div class="col-xs-2">
+			<a class="details" href="#">View Details</a>
+		</div>
+	</div>
+<% end %>
+</div>
+</div>
+
+<div class="altdashViewU">
+<div class="container">
+	<div class="row titleRow">
+
+		<div class="col-xs-3">
+			Building Name
+		</div>
+		<div class="col-xs-1">
+			Unit
+		</div>
+		<div class="col-xs-1">
+			Type
+		</div>
+		<div class="col-xs-1">
+			Bed
+		</div>
+		<div class="col-xs-1">
+			Bath
+		</div>
+		<div class="col-xs-1">
+			Sq Ft
+		</div>
+		<div class="col-xs-1">
+			Rent
+		</div>
+		<div class="col-xs-1">
+			Vacant
+		</div>
+		<div class="col-xs-2">
+			View Details
+		</div>
+	</div>
+	<% @buildings.each do |b| %>
+	<% @units.each do |u| %>
+	<div class="row contentRow">
+
+		<div class="col-xs-3">
+			<%= b.bName %>
+		</div>
+		<div class="col-xs-1">
+			<%= u.uNumber %>
+		</div>
+		<div class="col-xs-1">
+			<%= u.uType %>
+		</div>
+		<div class="col-xs-1">
+			<%= u.uBedroomCount %>
+		</div>
+		<div class="col-xs-1">
+			<%= u.uBathroomCount %>
+		</div>
+		<div class="col-xs-1">
+			<%= u.uSquareFootage %>
+		</div>
+		<div class="col-xs-1">
+			$<%= u.uPrice %>
+		</div>
+		<div class="col-xs-1">
+			<% if u.uListing= "true" %>
+			<%= 'Yes' %>
+			<% else %>
+			<%= 'No' %>
+			<% end %>
+		</div>
+		<div class="col-xs-2">
+			<a class="details" href="#">View Details</a>
+		</div>
+	</div>
+<% end %><% end %>
+<br />
+
+
+</div>
+
+<% end %>
+
