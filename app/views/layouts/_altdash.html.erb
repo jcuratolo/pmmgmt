@@ -122,7 +122,11 @@
 			$<%= u.uPrice %>
 		</div>
 		<div class="col-xs-1">
-			<%= u.uListing %>
+			<% if u.uListing= "true" %>
+			<%= 'Yes' %>
+			<% else %>
+			<%= 'No' %>
+			<% end %>
 		</div>
 		<div class="col-xs-2">
 			<a class="details" href="#">View Details</a>
