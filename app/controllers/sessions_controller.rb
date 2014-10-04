@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   def new
+    @user = User.new
+    @is_login = true
   end
 
   def create

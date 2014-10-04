@@ -1,39 +1,89 @@
 <div class="container listingcontainer">
   <br />
-<% @buildings.each do |b| %>
-<% b.units.each do |u| %>
+  <% @buildings.each do |b| %>
+  <% b.units.each do |u| %>
 
-<div class="unitfeat">
-  <div clas="sideimg">
-<!--     <span class="clicktxt">I'm interested!</span> -->
-    <%= image_tag u.unitimage.url(:medium), :class => "sideimg" %>
-  </div>
+  <div class="unitfeat">
 
-  <div class="rprice">$ <%= u.uPrice %>0 / month</div>
-   
-  <div class="text-center infotext">
-    <%= u.uBedroomCount %> Bed <%= u.uBathroomCount %> Bath <%= u.uType %> 
-    <%= u.uSquareFootage %> Sq Ft  <br /><br />
+    <div id="myCarousel" class="smcarousel carousel slide mySlider carousel-fade" data-ride="carousel">
 
-    <%= b.bAddress1 %> #<%= u.uNumber %>, 
-    <%= b.bCity %>
-    <%= b.bState %> <%= b.bZip %><br/>
-  </div>
+      <div class="carousel-inner">
+        <div class="sideimg">
+          <div class="item active">
+            <%= image_tag u.unitimage.url(:medium), :class => "sideimg" %>
+            <div class="carousel-caption slideTxt">
+              <h1></h1><br />
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sideimg">
 
-  <div class="desc">
+            <%= image_tag u.unitimage2.url(:medium), :class => "sideimg" %>
+            <div class="carousel-caption slideTxt">
+              <h1></h1><br />
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sideimg">
 
-    Description: <%= u.uDescription %>
+            <%= image_tag u.unitimage3.url(:medium), :class => "sideimg" %>
+            <div class="carousel-caption slideTxt">
+              <h1></h1><br />
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="sideimg">
 
-  </div><br />
+            <%= image_tag u.unitimage4.url(:medium), :class => "sideimg" %>
+            <div class="carousel-caption slideTxt">
+              <h1></h1><br />
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+          <span class="fa fa-angle-left myArrow"></span>
+        </a>
+
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+          <span class="fa fa-angle-right myArrow"></span>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="rprice">$ <%= u.uPrice %>0 / month</div>
+
+    <div class="text-center infotext">
+      <%= u.uBedroomCount %> Bed <%= u.uBathroomCount %> Bath <%= u.uType %> 
+      <%= u.uSquareFootage %> Sq Ft  <br /><br />
+
+      <%= b.bAddress1 %> #<%= u.uNumber %>, 
+      <%= b.bCity %>
+      <%= b.bState %> <%= b.bZip %><br/>
+    </div>
+
+    <div class="desc">
+
+      Description: <%= u.uDescription %>
+
+    </div><br />
 
     <button class="my-btn">Find out more.</button>
 
+  </div>
+
+  <hr>
+
+
+  <% end %>
+  <% end %>
+
 </div>
 
-<hr>
 
-
-<% end %>
-<% end %>
-
-</div>

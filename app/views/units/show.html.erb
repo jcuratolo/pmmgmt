@@ -1,5 +1,5 @@
 <div id="home"></div>
-<%= render 'layouts/altnav' %>
+<%#= render 'layouts/altnav' %>
 
 
 
@@ -9,8 +9,6 @@
 
   <br /><br />
   <div class="container unitshow">
-
-    <%= render 'layouts/listingslider' %>
 
     <div class="row units"><br /><br />
       <div class="col-xs-1">
@@ -31,7 +29,11 @@
           <span class="mytitle">Date Listed: </span>
           <span class="bold"><%= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
           <span class="mytitle">Description: </span>
+
           <%= image_tag @unit.unitimage.url(:medium) %>
+          <%= image_tag @unit.unitimage2.url(:medium) %>
+          <%= image_tag @unit.unitimage3.url(:medium) %>
+          <%= image_tag @unit.unitimage4.url(:medium) %>
           <span class="bold"><%= @unit.uDescription %></span>
 <br /><br /><br />
               <button class="btn btn-default btn-md btn buildinbtn">Contact Us for Details!</button>

@@ -292,8 +292,6 @@ $grnbtn-color:  #53d81e;
 
 }
 
-
-
 .loginTxt {
   font-family: $font-stack;
   font-size: 1.2em;
@@ -309,7 +307,9 @@ $grnbtn-color:  #53d81e;
   font-family: $font-stack;
 }
 
-.myArrow {margin-top: 2.7em;}
+.myArrow {
+  margin-top: 3.3em;
+}
 
 .carousel-control:hover {
   background-color: rgba(0, 0, 0, .1);
@@ -954,12 +954,12 @@ h1 {
   z-index: 10;
 }
 
-.sideimg:hover {
+/*.sideimg:hover {
   opacity: .5;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   z-index: 2;
-}
+}*/
 
 .my-btn {
   border-radius: 3px;
