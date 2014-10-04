@@ -8,7 +8,8 @@ class Unit < ActiveRecord::Base
   styles: {
     thumb: '100x100>',
     square: '200x200#',
-    medium: '300x300>' }, 
+    medium: '300x300>',
+    large: '500x500>' }, 
   :bucket => 'pmgmt'
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :unitimage, :content_type => /\Aimage\/.*\Z/
@@ -17,7 +18,8 @@ class Unit < ActiveRecord::Base
   styles: {
     thumb: '100x100>',
     square: '200x200#',
-    medium: '300x300>' }, 
+    medium: '300x300>',
+    large: '500x500>' }, 
   :bucket => 'pmgmt'
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :unitimage2, :content_type => /\Aimage\/.*\Z/
@@ -26,7 +28,8 @@ class Unit < ActiveRecord::Base
   styles: {
     thumb: '100x100>',
     square: '200x200#',
-    medium: '300x300>' }, 
+    medium: '300x300>',
+    large: '500x500>' }, 
   :bucket => 'pmgmt'
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :unitimage3, :content_type => /\Aimage\/.*\Z/
@@ -35,7 +38,8 @@ class Unit < ActiveRecord::Base
   styles: {
     thumb: '100x100>',
     square: '200x200#',
-    medium: '300x300>' }, 
+    medium: '300x300>',
+    large: '500x500>' }, 
   :bucket => 'pmgmt'
   # Validate the attached image is image/jpg, image/png, etc
   validates_attachment_content_type :unitimage4, :content_type => /\Aimage\/.*\Z/

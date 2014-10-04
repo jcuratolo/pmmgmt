@@ -1,7 +1,17 @@
-<div id="home"></div>
-  <div class="container unitshow">
+<!-- Button trigger modal -->
+<button class="my-btn" data-toggle="modal" id="themodal" data-target="#myModal">
+  <i class="fa fa-plus-circle"></i> &nbsp;Learn more
+</button>
 
-      <div class="headtitlelist">
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        
+
+        <div class="headtitlelist">
         <h1 class="pull-left margleft"><%= @unit.building.bName %></h1>
         <h1 class="pull-right">$<%= @unit.uPrice %> / <%= @unit.uSquareFootage %> Square Feet</h1>
       </div>
@@ -46,17 +56,14 @@
             <div class="pull-right">
           <span class="mytitle">Date Listed: </span>
           <span class="bold"><%= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
- 
+            </div>
           </div>
 
       </div>
 
     </div>
-
+        
+      </div>
+    </div>
   </div>
-
-
-
-
-
-<%#= link_to image_tag(@unitimage.image.url(:med)), @unitimage.image.url %>
+</div>

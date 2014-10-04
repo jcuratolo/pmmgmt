@@ -307,6 +307,50 @@ $grnbtn-color:  #53d81e;
   font-family: $font-stack;
 }
 
+.unitimageblock {
+  padding: 2em;
+}
+
+.margleft {
+  margin-left: 2em;
+}
+
+.headtitlelist {
+  width: 100%;
+  height: 100px;
+  background-color: $primary-color;
+  color: black;
+  margin: 0 auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 5em;
+  font-family: helvetica;
+  font-size: 2em;
+}
+
+.unitshowtwo {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 1px solid $primary-color;
+  min-height: 200px;
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  font-family: helvetica;
+}
+
+.unitdescriptionblock {
+  margin-top: 2em;
+}
+
+.listedat {
+  margin-right: 1em;
+}
+
+.unitdesc {
+  margin: 2em 2em 2em 0;
+}
+
 .myArrow {
   margin-top: 3.3em;
 }
