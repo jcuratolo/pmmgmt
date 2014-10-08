@@ -99,7 +99,7 @@
 		</div>
 	</div>
 	<% @buildings.each do |b| %>
-	<% @units.each do |u| %>
+	<% b.units.each do |u| %>
 	<!-- <a href="#" class="mylistingimg"><%#= image_tag u.unitimage.url(:thumb) %></a>
       <a href="#" class="mylistingimg"><%#= image_tag u.unitimage2.url(:thumb) %></a>
       <a href="#" class="mylistingimg"><%#= image_tag u.unitimage3.url(:thumb) %></a>
