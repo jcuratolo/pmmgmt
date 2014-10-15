@@ -69,13 +69,14 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 group :development, :test do
-  gem "rspec-rails", "~> 3.1.0"
+  gem "rspec-rails", "3.1.0"
   gem "factory_girl_rails"
+  gem "guard-rspec", require: false
 end
 
 group :test do
   gem "faker"
-  gem "capybara"
+  gem "capybara", "2.4.3"
 end
 
 ruby "2.0.0"

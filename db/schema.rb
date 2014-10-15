@@ -69,6 +69,18 @@ ActiveRecord::Schema.define(version: 20141002215551) do
     t.string   "unitimage_content_type"
     t.integer  "unitimage_file_size"
     t.datetime "unitimage_updated_at"
+    t.string   "unitimage2_file_name"
+    t.string   "unitimage2_content_type"
+    t.integer  "unitimage2_file_size"
+    t.datetime "unitimage2_updated_at"
+    t.string   "unitimage3_file_name"
+    t.string   "unitimage3_content_type"
+    t.integer  "unitimage3_file_size"
+    t.datetime "unitimage3_updated_at"
+    t.string   "unitimage4_file_name"
+    t.string   "unitimage4_content_type"
+    t.integer  "unitimage4_file_size"
+    t.datetime "unitimage4_updated_at"
     t.float    "uPrice"
   end
 
