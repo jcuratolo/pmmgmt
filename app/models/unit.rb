@@ -1,6 +1,6 @@
 class Unit < ActiveRecord::Base
   belongs_to :building
-  has_many :unitfeatures
+  has_many :unit_features
   validates :uType, :uNumber, :uBedroomCount, :uBathroomCount, :uSquareFootage, :uPrice, :building_id, presence: true
 
 
