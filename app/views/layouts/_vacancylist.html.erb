@@ -1,10 +1,6 @@
-<h2><%=debug(params)%></h2>
+<h2><%#=debug(params)%></h2>
 <div class="unitside">
-  <% @buildings.each do |b| %>
-    <div style="border: 1px solid darkgray; margin: 3px;background-color: lightgray;"><h4><%= b.bName %></h4></div>
-  <% end %>
-  <%#= render 'layouts/unitsidebar' %>
-  <%#binding.pry%>
+  <%= render 'layouts/unitsidebar' %>
   
 
 
