@@ -1,0 +1,52 @@
+<div id="mysmallCarousel carousel-example-generic pushdown" class="smcarousel slide mySlider carousel-fade" data-ride="carousel">
+  <!-- Indicators -->
+<!--     <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol> -->
+<% @buildings.each do |b| %>
+<% b.units.each do |u| %>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+       <%= image_tag u.unitimage1.url(:medium), :class => "sideimg" %>
+      <div class="carousel-caption slideTxt">
+        <h1></h1><br />
+      </div>
+    </div>
+    <div class="item">
+       <%= image_tag u.unitimage2.url(:medium), :class => "sideimg" %>
+       <div class="carousel-caption">
+        <h1></h1><br />
+      </div>
+    </div>
+
+    <div class="item">
+       <%= image_tag u.unitimage3.url(:medium), :class => "sideimg" %>
+ 
+      <div class="carousel-caption">
+        <h1></h1><br />
+      </div>
+    </div>
+      <div class="item">
+         <%= image_tag u.unitimage4.url(:medium), :class => "sideimg" %>
+      <div class="carousel-caption">
+        <h1></h1><br />
+      </div>
+    </div>
+    
+  </div>
+<% end %>
+<% end %>
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="fa fa-angle-left fa-3x myArrow"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="fa fa-angle-right fa-3x myArrow"></span>
+  </a>
+</div>
+
+
+</div>

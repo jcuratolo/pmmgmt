@@ -1,5 +1,5 @@
 class UnitsController < ApplicationController
-  before_action :check_for_user
+  #before_action :check_for_user
 
   def check_for_user
     if !current_user
@@ -44,9 +44,9 @@ class UnitsController < ApplicationController
   def update
     @unit = Unit.find(params[:id]) 
       if @unit.update_attributes(params.require(:unit).permit(:uNumber, :uType, :uBedroomCount, :uBathroomCount, :uSquareFootage, :building_id, :uListing, :uDescription, :unitimage, :unitimage2, :unitimage3, :unitimage4, :uPrice, :bucket))
-      redirect_to units_path 
+        redirect_to units_path 
       else
-      render 'edit' 
+        render 'edit' 
       end
   end
 
