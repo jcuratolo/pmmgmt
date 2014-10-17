@@ -2,6 +2,7 @@ class Building < ActiveRecord::Base
   extend ::Geocoder::Model::ActiveRecord
   has_many :units
   has_many :building_features
+  #has_many :unit_features, through: :units
 
   geocoded_by :full_street_address
   after_validation :geocode

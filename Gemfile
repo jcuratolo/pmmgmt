@@ -72,6 +72,9 @@ group :development, :test do
   gem "rspec-rails", "3.1.0"
   gem "factory_girl_rails"
   gem "guard-rspec", require: false
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "pry"
 end
 
 group :test do
