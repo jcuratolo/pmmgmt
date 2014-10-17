@@ -12,15 +12,15 @@
         
 
         <div class="headtitlelist">
-        <h1 class="pull-left margleft"><%= @unit.building.bName %></h1>
-        <h1 class="pull-right">$<%= @unit.uPrice %> / <%= @unit.uSquareFootage %> Square Feet</h1>
+        <h1 class="pull-left margleft"><%#= @unit.building.bName %></h1>
+        <h1 class="pull-right">$<%#= @unit.uPrice %> / <%#= @unit.uSquareFootage %> Square Feet</h1>
       </div>
 
     <div class="row unitshowtwo">
 
       <div class="col-xs-5 text-right">
         <div class="unitimageblock">
-        <%= image_tag @unit.unitimage.url(:large) %>
+        <%#= image_tag @unit.unitimage.url(:large) %>
         </div>
       </div>
 
@@ -31,22 +31,22 @@
           <div class="row">
 
             <div class="col-xs-6">
-              <%= @unit.building.bName %>
-              <%= @unit.building.bAddress1 %><br />
-              <%= @unit.building.bCity %>
-              <%= @unit.building.bState %>
-              <%= @unit.building.bZip%>
+              <%#= @unit.building.bName %>
+              <%#= @unit.building.bAddress1 %><br />
+              <%#= @unit.building.bCity %>
+              <%#= @unit.building.bState %>
+              <%#= @unit.building.bZip%>
             </div>
             <div class="col-xs-6">
-              $<%= @unit.uPrice %><br />
-              <%= @unit.uSquareFootage %> Square Feet<br />
-              <%= @unit.uBedroomCount %> Bedroom 
-              <%= @unit.uType %><br />
+              $<%#= @unit.uPrice %><br />
+              <%#= @unit.uSquareFootage %> Square Feet<br />
+              <%#= @unit.uBedroomCount %> Bedroom 
+              <%#= @unit.uType %><br />
             </div>
           </div>
 
           <div class="unitdesc">
-              <%= @unit.uDescription %>
+              <%#= @unit.uDescription %>
           </div>
               
          <!--      <button class="btn btn-default btn-primary">Request more info</button> -->
@@ -55,7 +55,7 @@
           <div class="row listedat">
             <div class="pull-right">
           <span class="mytitle">Date Listed: </span>
-          <span class="bold"><%= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
+          <span class="bold"><%#= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
             </div>
           </div>
 
