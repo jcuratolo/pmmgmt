@@ -71,10 +71,25 @@
 
 </iframe> -->
 
+  <div class="text-center"<br /><br />
+  <h2 class="mapTxt" id="mapsec">Check out our properties!</h2>
+</div>
+
+
+  <%#= render 'layouts/unitlist' %>
+
+    
+  
+  <div class="row mapsec"> 
+
+    <%= render 'layouts/map' %>
 
 
 
-<!--   <div id="aboutsec">  </div> 
+  </div>
+
+  
+  <div id="aboutsec">  </div> 
   <div class="text-center">
 
     <h2 class="mapTxt">About Us</h2>
@@ -103,23 +118,6 @@
       <div class="col-xs-1 mycontainer"></div>
 
     </div>
-  </div> -->
-
-  <div class="text-center"<br /><br />
-  <h2 class="mapTxt" id="mapsec">Check out our properties!</h2>
-</div>
-
-
-  <%#= render 'layouts/unitlist' %>
-
-    
-  
-  <div class="row mapsec"> 
-
-    <%= render 'layouts/map' %>
-
-
-
   </div>
 
 
@@ -169,7 +167,7 @@
           var target = $(this.hash);
           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
           if (target.length) {
-            $('html,body').animate({scrollTop: target.offset().top - 160}, 1000);
+            $('html,body').animate({scrollTop: target.offset().top - 170}, 1000);
             return false;
           }
         }
