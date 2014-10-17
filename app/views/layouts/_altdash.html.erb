@@ -95,10 +95,13 @@
 		<div class="col-xs-1">
 			Vacant
 		</div>
-		<div class="col-xs-2">
-			View Details
+		<div class="col-xs-1">
+			View
 		</div>
 		<div class="col-xs-1">
+			Edit
+		</div>
+			<div class="col-xs-1">
 			Delete
 		</div>
 	</div>
@@ -138,10 +141,13 @@
 			<%= 'No' %>
 			<% end %>
 		</div>
-		<div class="col-xs-2">
+		<div class="col-xs-1">
 			<a class="details" href="#">
-				<%= link_to "View Details", unit_path(u), method: :get, :class => "viewdeets" %>
+				<%= link_to "View", unit_path(u), method: :get, :class => "viewdeets" %>
 			</a>
+		</div>
+		<div class="col-xs-1">
+				<%= button_to "edit", edit_unit_path(u.id), method: :get, :class => "deletebutn" %>
 		</div>
 		<div class="col-xs-1">
 				<%= button_to "delete", unit_path(u.id), method: :delete, :class => "deletebutn" %>
