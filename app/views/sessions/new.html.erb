@@ -1,16 +1,31 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<div class="yelBg">
+  <div class="container">
+    <div class="text-center loginForm slideUp">
+      <img class="logohome flipInY cenImage" src="/assets/pmlogo1.png" alt="logo">
+      <br /><br />
+        <div class="form-group">
 
-<h1>Log In</h1>
+<h2>Log In</h2>
+<br />
 
 <%= form_tag sessions_path do %>
   <div class="field">
     <%= label_tag :email %><br />
-    <%= text_field_tag :email, params[:email] %>
+    <%= text_field_tag :email, params[:email], :class => "form-control"  %>
   </div>
   <div class="field">
     <%= label_tag :password %><br />
-    <%= password_field_tag :password %>
+    <%= password_field_tag :password, params[:password], :class => "form-control"  %>
   </div>
-  <div class="actions"><%= submit_tag "Log In" %></div>
+  <div class="actions"><%= submit_tag "Log In", :class => "btn btn-default" %></div>
 <% end %>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+
+</div>
