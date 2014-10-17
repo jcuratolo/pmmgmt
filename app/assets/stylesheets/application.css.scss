@@ -322,7 +322,8 @@ $grnbtn-color:  #53d81e;
 
 .viewdashlink:hover {
   background-color: white;
-  color: blue;
+  color: rgb(66, 139, 202); 
+  text-decoration: none;
 }
 
 .margleft {
@@ -336,7 +337,31 @@ $grnbtn-color:  #53d81e;
   border-radius: 5px;
 }
 
-.viewdeets, .details {
+.editbutn {
+  border: none;
+  background-color: $primary-color;
+  color: black;
+  border-radius: 5px;
+  float: right;
+}
+
+.editcol {
+  text-align: right;
+}
+
+.editbutn:hover {
+  background-color: rgb(66, 139, 202); 
+  color: white;
+}
+
+.deletebutn:hover {
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+.details > .viewdeets {
   background-color: white;
   color: rgb(66, 139, 202);
 }
@@ -344,6 +369,7 @@ $grnbtn-color:  #53d81e;
 .viewdeets:hover {
   background-color: white;
   color: rgb(66, 139, 202);
+  text-decoration: none;
 }
 
 
