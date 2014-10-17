@@ -128,6 +128,10 @@ $grnbtn-color:  #53d81e;
   font-size: .7em;
 }
 
+.dashboardbtm {
+  margin-bottom: 3em;
+}
+
 .showbt {
   position: absolute;
   margin-top: -1em;
@@ -777,9 +781,9 @@ h1 {
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   z-index: 1000;
-  position: fixed;
   top: 1em;
   left: 1em;
+  display: inline;
 }
 
 .addbuilding {
@@ -948,7 +952,7 @@ h1 {
   font-weight: 100;
   font-family: $font-stack;
   font-size: 36px;
-  margin-top: 1em;
+  margin-top: -1.5em;
 }
 
 .dashhead {
