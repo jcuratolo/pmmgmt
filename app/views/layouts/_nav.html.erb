@@ -16,8 +16,8 @@
         
           <% if current_user %>
             Logged in as <%= current_user.email %>&nbsp &nbsp &nbsp &nbsp &nbsp
-              <%= link_to "Log Out", logout_path %> &nbsp &nbsp &nbsp &nbsp &nbsp
-              <%= link_to "View Admin Dashboard", units_path %>
+              <%= link_to "Log Out", logout_path, :class => "viewdashlink" %> &nbsp &nbsp &nbsp &nbsp &nbsp
+              <%= link_to "View Admin Dashboard", units_path, :class => "viewdashlink" %>
           <% else %>
             <%= link_to "Admin Login", login_path, :class => "btn btn-default btn-md btn-log" %>
           <% end %>
