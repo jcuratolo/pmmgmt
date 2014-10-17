@@ -34,13 +34,13 @@
 			Address
 		</div>
 		<div class="col-xs-2">
-			Phone
+
 		</div>
 		<div class="col-xs-1">
 			Units
 		</div>
 		<div class="col-xs-2">
-			Delete Building
+			Phone
 		</div>
 	</div>
 	<% @buildings.each do |b| %>
@@ -53,13 +53,14 @@
 			<%= b.bAddress1 %>
 		</div>
 		<div class="col-xs-2">
-			<%= b.bPhone %>
+	
 		</div>
 		<div class="col-xs-1">
 			<%= b.bUnitCount %>
 		</div>
 		<div class="col-xs-2">
 			<%#= link_to  %>
+			<%= b.bPhone %>
 		</div>
 	</div>
 <% end %>
