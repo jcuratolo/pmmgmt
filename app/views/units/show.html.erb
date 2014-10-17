@@ -9,8 +9,21 @@
     <div class="row unitshowtwo">
 
       <div class="col-xs-5 text-right">
-        <div class="unitimageblock">
-        <%= image_tag @unit.unitimage.url(:large) %>
+        <div class="unitimageblock text-center">
+          <div class="row">
+            <div class="col-xs-6">
+              <%= image_tag @unit.unitimage.url(:square), :class => "showimage" %>
+              <%= image_tag @unit.unitimage2.url(:square), :class => "showimage" %>
+            </div>
+             <div class="col-xs-6">
+              <%= image_tag @unit.unitimage3.url(:square), :class => "showimage" %>
+              <%= image_tag @unit.unitimage4.url(:square), :class => "showimage" %>
+            </div>
+
+          </div>
+        
+        
+        <%#= image_tag @unit.unitimage2.url(:thumb) %>
         </div>
       </div>
 

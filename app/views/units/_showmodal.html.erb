@@ -20,7 +20,7 @@
 
       <div class="col-xs-5 text-right">
         <div class="unitimageblock">
-        <%#= image_tag @unit.unitimage.url(:large) %>
+        <%#= image_tag @unit.unitimage.url(:thumb) %>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
 
           <div class="row listedat">
             <div class="pull-right">
-          <span class="mytitle">Date Listed: </span>
+          <span class="mytitle"> Listed: </span>
           <span class="bold"><%#= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
             </div>
           </div>

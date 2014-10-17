@@ -38,7 +38,7 @@ $(document).ready(function () {
 	});
 
 
-   	$('.altdashViewU').hide();
+   	$('.altdashView').hide();
 
 });
 
