@@ -334,14 +334,32 @@ $grnbtn-color:  #53d81e;
   border: none;
   background-color: $primary-color;
   color: black;
+  height: 2em;
   border-radius: 5px;
+}
+
+.viewbutn {
+  border: none;
+  background-color: #777;
+  color: white;
+  border-radius: 5px;
+  height: 2em;
+}
+
+#carousel-example-generic {
+  height: 200px;
+}
+
+.viewbutn:hover {
+  background-color: rgb(66, 139, 2);
 }
 
 .editbutn {
   border: none;
-  background-color: $primary-color;
-  color: black;
+  background-color: rgb(66, 139, 202);
+  color: white;
   border-radius: 5px;
+  height: 2em;
   float: right;
 }
 
@@ -350,7 +368,7 @@ $grnbtn-color:  #53d81e;
 }
 
 .editbutn:hover {
-  background-color: rgb(66, 139, 202); 
+  background-color: rgb(66, 139, 2);
   color: white;
 }
 
@@ -383,7 +401,7 @@ $grnbtn-color:  #53d81e;
   border-top-right-radius: 10px;
   margin-top: 2em;
   font-family: helvetica;
-  font-size: 1.3em;
+  font-size: 2em;
 }
 
 .unitshowtwo {
@@ -398,7 +416,7 @@ $grnbtn-color:  #53d81e;
 }
 
 .unitdescriptionblock {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .listedat {
@@ -1042,12 +1060,20 @@ h1 {
   font-family: lato;
 }
 
-.showimage {
-  padding: .3em;
-}
-
 .infotext {
   margin-top: 1em;
+}
+
+#carousel-example-generic {
+  height: 294px;
+}
+
+.appbtn {
+  margin-top: 9.6em;
+}
+
+.daytimebtn {
+  margin-top: 1.5em;
 }
 
 .sideimg {

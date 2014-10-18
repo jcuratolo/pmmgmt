@@ -14,10 +14,8 @@
       </button>  
       <ul class="nav navbar-nav navbar-left navLinks">
         
-          <% if current_user %>
-            Logged in as <%= current_user.email %>&nbsp &nbsp &nbsp &nbsp &nbsp
-              <%= link_to "Log Out", logout_path, :class => "viewdashlink" %> &nbsp &nbsp &nbsp &nbsp &nbsp
-              <%= link_to "View Admin Dashboard", units_path, :class => "viewdashlink" %>
+          <% if current_user %>    
+          <%= link_to "View Admin Dashboard", units_path, :class => "viewdashlink" %>
           <% else %>
             <%= link_to "Admin Login", login_path, :class => "btn btn-default btn-md btn-log" %>
           <% end %>
@@ -27,7 +25,15 @@
          <%#= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log", :method :get %></li>
         <%# end %>
       </ul>
+     
+
     </div>
+     <ul class="pull-right navbar-right navLinks">
+        <% if current_user %>
+            Logged in as <%= current_user.email %>&nbsp &nbsp &nbsp &nbsp &nbsp
+            <%= link_to "Log Out", logout_path, :class => "viewdashlink" %> &nbsp &nbsp &nbsp &nbsp
+        <% end %>
+      </ul>
       <ul class="nav navbar-nav nav-justified text-center logoTxt">
         <li><a class="logoLink fadeIn" href="/">< pmgmt ></a></li>
       </ul>
