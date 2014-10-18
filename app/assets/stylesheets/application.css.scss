@@ -129,7 +129,7 @@ $grnbtn-color:  #53d81e;
 }
 
 .dashboardbtm {
-  margin-bottom: 5em;
+  margin-bottom: 4em;
 }
 
 .showbt {
@@ -292,6 +292,22 @@ $grnbtn-color:  #53d81e;
   transition: background-color ease-out .3s;
 }
 
+.dashNavBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 1);
+  height: 5em;
+  z-index: 1000;
+  border-radius: none;
+  border: none !important;
+  -webkit-transition: background-color ease-out .3s;
+  -moz-transition: background-color ease-out .3s;
+  -o-transition: background-color ease-out .3s;
+  transition: background-color ease-out .3s;
+}
+
 .myNavBar:hover {
   background-color: rgba(255, 255, 255, 1);
   -webkit-transition: background-color ease-out .3s;
@@ -443,7 +459,7 @@ $grnbtn-color:  #53d81e;
 .dashbtn {
   width: 400px;
   margin: 0 auto;
-  margin-top: 5em;
+  margin-top: 3em;
 }
 
 .slideDown{
@@ -692,16 +708,19 @@ h1 {
 .altdashView {
   background-color: white;
   min-height: 200px;
-  max-height: 1000px;
   overflow: hidden;
   margin: 0 auto;
   margin-top: 2em;
 }
 
+.dashlist {
+  height: auto;
+  margin-bottom: 3em;
+}
+
 .altdashViewU {
   background-color: white;
   min-height: 200px;
-  max-height: 1000px;
   overflow: hidden;
   margin: 0 auto;
   margin-top: 2em;
