@@ -121,6 +121,10 @@ $grnbtn-color:  #53d81e;
   text-align: left;
 }
 
+.listingsviewwi {
+  width: 100% !important;
+}
+
 .testtt {
   padding-top: 1.6em;
   position: absolute;
@@ -1062,6 +1066,7 @@ h1 {
 .listingcontainer {
   height: auto;
   width: 100%;
+  background-color: white;
 }
 
 .desc {
@@ -1158,7 +1163,7 @@ h1 {
 }
 
 .mapside {
-  width: 75%;
+  width: 100%;
   float: right;
 }
 
