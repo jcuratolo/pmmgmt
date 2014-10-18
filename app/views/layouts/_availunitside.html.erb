@@ -5,45 +5,38 @@
 
   <div class="unitfeat">
 
-    <div id="myCarousel" class="smcarousel carousel slide mySlider carousel-fade" data-ride="carousel">
+ <div id="carousel-example-generic" class="carousel slide carousel-example-generic-two" data-ride="carousel">
 
-      <div class="carousel-inner">
-        <div class="sideimg">
-          <div class="item active">
-            <%= image_tag u.unitimage.url(:medium), :class => "sideimg" %>
-            <div class="carousel-caption slideTxt">
-              <h1></h1><br />
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <%= image_tag u.unitimage.url(:medium), :class => "showimage" %>
+                </div>
+                <div class="item">
+                  <%= image_tag u.unitimage2.url(:medium), :class => "showimage" %>
+                </div>
+                <div class="item">
+                  <%= image_tag u.unitimage3.url(:medium), :class => "showimage" %>
+                </div>
+                
+              </div>
+
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <i class="fa carary fa-2x fa-arrow-circle-left"></i>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+               <i class="fa carary fa-2x fa-arrow-circle-right"></i>
+              </a>
             </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sideimg">
-            <%= image_tag u.unitimage2.url(:medium), :class => "sideimg" %>
-          </div>
-        </div>
-        <div class="item">
-          <div class="sideimg">
-            <%= image_tag u.unitimage3.url(:medium), :class => "sideimg" %>     
-          </div>
-        </div>
-        <div class="item">
-          <div class="sideimg">
 
-            <%= image_tag u.unitimage4.url(:medium), :class => "sideimg" %>
-          </div>
-        </div>
-
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="fa fa-angle-left myArrow"></span>
-        </a>
-
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="fa fa-angle-right myArrow"></span>
-        </a>
-      </div>
-    </div>
 
 
     <div class="rprice">$ <%= u.uPrice %>0 / month</div>
