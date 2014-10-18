@@ -128,9 +128,6 @@ $grnbtn-color:  #53d81e;
   font-size: .7em;
 }
 
-.dashboardbtm {
-  margin-bottom: 4em;
-}
 
 .showbt {
   position: absolute;
@@ -297,7 +294,7 @@ $grnbtn-color:  #53d81e;
   top: 0;
   width: 100%;
   left: 0;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: transparent;
   height: 5em;
   z-index: 1000;
   border-radius: none;

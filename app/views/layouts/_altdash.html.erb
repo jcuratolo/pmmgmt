@@ -2,21 +2,7 @@
   	  <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-  <ul class="nav navbar-nav navbar-left navLinks">
-        
-          <% if current_user %>    
-          <%= link_to "View Admin Dashboard", units_path, :class => "viewdashlink" %>
-          <% else %>
-            <%= link_to "Admin Login", login_path, :class => "btn btn-default btn-md btn-log" %>
-          <% end %>
-
-
-        <%#= form_for @user, {url: new_user_path} do |f| %>
-         <%#= button_to "Sign up", new_user_path, :class => "btn btn-default btn-md btn-log", :method :get %></li>
-        <%# end %>
-      </ul>
-     
-
+ 
     </div>
      <ul class="pull-right navbar-right navLinks">
         <% if current_user %>
