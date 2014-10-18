@@ -77,9 +77,8 @@ group :development, :test do
   gem "pry"
 end
 
-group :test do
-  gem "faker"
-  gem "capybara", "2.4.3"
-end
+
+gem "faker"
+gem "capybara", "2.4.3"
 
 ruby "2.0.0"

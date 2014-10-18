@@ -1,4 +1,4 @@
-require 'csv'
+  require 'csv'
 require 'Faker'
 # Seed the database with some test data
 
