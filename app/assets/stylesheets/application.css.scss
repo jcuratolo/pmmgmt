@@ -351,15 +351,15 @@ $grnbtn-color:  #53d81e;
 
 .deletebutn {
   border: none;
-  background-color: $primary-color;
-  color: black;
+  background-color: #1C517D;
+  color: white;
   height: 2em;
   border-radius: 5px;
 }
 
 .viewbutn {
   border: none;
-  background-color: #777;
+  background-color: #3EC0E1;
   color: white;
   border-radius: 5px;
   height: 2em;
@@ -374,12 +374,26 @@ $grnbtn-color:  #53d81e;
 }
 
 .viewbutn:hover {
-  background-color: rgb(66, 139, 2);
+  background-color: $primary-color;
+  color: black;
+}
+
+.btn-col {
+  background-color: $primary-color;
+  color: black;
+  border: 1px solid white;
+  font-family: $font-stack;
+  height: 3em;
+}
+
+.btn-col:hover {
+  background-color: black;
+  color: $primary-color;
 }
 
 .editbutn {
   border: none;
-  background-color: rgb(66, 139, 202);
+  background-color: #428bca;
   color: white;
   border-radius: 5px;
   height: 2em;
@@ -399,8 +413,8 @@ $grnbtn-color:  #53d81e;
 }
 
 .editbutn:hover {
-  background-color: rgb(66, 139, 2);
-  color: white;
+  background-color: $primary-color;
+  color: black;
 }
 
 .deletebutn:hover {
@@ -971,7 +985,8 @@ h1 {
 }
 
 .addunit:hover {
-  background-color: green;
+  background-color: black;
+  color: $primary-color;
 }
 
 .aboutimg {
