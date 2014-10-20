@@ -351,18 +351,34 @@ $grnbtn-color:  #53d81e;
 
 .deletebutn {
   border: none;
-  background-color: #1C517D;
-  color: white;
+  background-color: white;
+  color: red;
   height: 2em;
-  border-radius: 5px;
+  font-size: 1.3em;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.deletebutn:hover {
+  border: none;
+  color: red;
+  border-radius: 50%;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;  
 }
 
 .viewbutn {
   border: none;
-  background-color: #3EC0E1;
-  color: white;
+  background-color: #eee;
+  color: #1C517D;
   border-radius: 5px;
   height: 2em;
+  border: 1px solid #F6F6F6;
 }
 
 #carousel-example-generic {
@@ -374,8 +390,8 @@ $grnbtn-color:  #53d81e;
 }
 
 .viewbutn:hover {
-  background-color: $primary-color;
-  color: black;
+  background-color: #1C517D;
+  color: white;
 }
 
 .btn-col {
@@ -387,14 +403,15 @@ $grnbtn-color:  #53d81e;
 }
 
 .btn-col:hover {
-  background-color: black;
-  color: $primary-color;
+  background-color: #357ebd;
+  color: white;
+  border: none;
 }
 
 .editbutn {
   border: none;
-  background-color: #428bca;
-  color: white;
+  background-color: white;
+  color: #428bca;
   border-radius: 5px;
   height: 2em;
   float: right;
@@ -413,15 +430,8 @@ $grnbtn-color:  #53d81e;
 }
 
 .editbutn:hover {
-  background-color: $primary-color;
-  color: black;
-}
-
-.deletebutn:hover {
-  border: none;
-  background-color: red;
+  background-color: #428bca;
   color: white;
-  border-radius: 5px;
 }
 
 .details > .viewdeets {
