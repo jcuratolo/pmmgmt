@@ -402,6 +402,23 @@ $grnbtn-color:  #53d81e;
   height: 3em;
 }
 
+.btn-primary {
+  font-family: $font-stack;
+  border: none;
+}
+
+.btn-yel {
+  background-color: $primary-color;
+  color: black;
+  border: none;
+  font-family: $font-stack;
+}
+
+.btn-yel:hover {
+  background-color: black;
+  color: $primary-color;
+}
+
 .btn-col:hover {
   background-color: #357ebd;
   color: white;
