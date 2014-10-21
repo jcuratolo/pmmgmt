@@ -356,20 +356,13 @@ $grnbtn-color:  #53d81e;
   height: 2em;
   font-size: 1.3em;
   border-radius: 50%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
 }
 
 .deletebutn:hover {
   border: none;
+  font-weight: bold;
   color: red;
-  border-radius: 50%;
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;  
+  border-radius: 50%; 
 }
 
 .viewbutn {
