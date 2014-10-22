@@ -375,10 +375,6 @@ $grnbtn-color:  #53d81e;
   border: 1px solid #F6F6F6;
 }
 
-#carousel-example-generic {
-  height: 232px !important;
-}
-
 .viewbutn:hover {
   background-color: #1C517D;
   color: white;
@@ -429,12 +425,17 @@ $grnbtn-color:  #53d81e;
   border: none;
 }
 
+.subbtns {
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
 .editcol {
   text-align: right;
 }
 
 .carar {
-  margin-top: 2.4em;
+  margin-top: 2.5em;
 }
 
 .carary {
@@ -475,7 +476,7 @@ $grnbtn-color:  #53d81e;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border: 1px solid $primary-color;
-  min-height: 200px;
+  min-height: 400px;
   width: 100%;
   margin: 0 auto;
   height: auto;
@@ -1147,10 +1148,6 @@ h1 {
 
 .infotext {
   margin-top: 1em;
-}
-
-#carousel-example-generic {
-  height: 294px;
 }
 
 .appbtn {
