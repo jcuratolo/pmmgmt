@@ -88,21 +88,17 @@
           </div>
               
          <!--      <button class="btn btn-default btn-primary">Request more info</button> -->
-         <div class="row appbtn">
-          
-            </div>
           <div class="row listedat">
-           
-            <div class="pull-right daytimebtn">
-          <span class="mytitle">Date Listed: </span>
-          <span class="bold"><%= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
-          </div>
 
           <div class="pull-left">
                 <button class="btn btn-default btn-primary">Submit an application</button>
                 <%#= button_to listings_path, :class => "btn btn-default btn-primary btn-yel" %>
 
                  <a href="/listings"><button class="btn btn-default btn-primary btn-yel">All Listings</button></a>
+          </div>
+            <div class="pull-right daytimebtn">
+          <span class="mytitle">Date Listed: </span>
+          <span class="bold"><%= @unit.created_at.strftime("%b%e%l:%M %p") %></span> <br />
           </div>
 
       </div>
